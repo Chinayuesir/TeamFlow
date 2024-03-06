@@ -80,3 +80,21 @@ https://odininspector.com/
 7、通过Unity的Console窗口可以看到Debug数据，推荐的方式是通过显示结果节点接收结果。其利用了一个内置的Markdown渲染器，能够较为整洁的显示出最终结果。你可以通过提示词的形式，让AI以Markdown格式回复。
 
 ## 节点介绍（施工中）
+
+### StartNode
+
+## 特别鸣谢
+
+### 感谢以下开源库及其作者
+
+- XNode
+- UniTask
+- com.openai.unity
+
+- Stephen Hodgson：https://github.com/StephenHodgson
+- liangxiegame：https://github.com/liangxiegame
+
+### 感谢以下用户为本库提供的帮助
+
+- B站用户：生活在他方
+
