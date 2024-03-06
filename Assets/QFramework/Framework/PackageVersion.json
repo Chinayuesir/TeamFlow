@@ -1,0 +1,20 @@
+{
+    "Id": "",
+    "Version": "v1.0.93",
+    "Type": 0,
+    "AccessRight": 0,
+    "DownloadUrl": "",
+    "InstallPath": "Assets/QFramework/Framework/",
+    "IncludeFileOrFolders": [
+        "Assets/QFramework/Framework",
+        "Assets/QFramework/Toolkits"
+    ],
+    "DocUrl": "https://liangxiegame.com",
+    "Readme": {
+        "version": "v1.0.93",
+        "content": "QFramework.cs 支持 Godot",
+        "author": "liangxie",
+        "date": "2023 年 09 月 26 日 15:17",
+        "PackageId": ""
+    }
+}
