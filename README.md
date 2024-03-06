@@ -27,9 +27,9 @@
 
 比如设计两个AI，一个用于整理游戏开发的需求，一个用于编写具体的代码。
 
-![image-20240306165945358](Images\image-20240306165945358.png)
+![image-20240306165945358](Images/image-20240306165945358.png)
 
-![image-20240306170116174](Images\image-20240306170116174.png)
+![image-20240306170116174](Images/image-20240306170116174.png)
 
 ## 部署和安装
 
@@ -47,33 +47,33 @@ https://odininspector.com/
 
 1、在Project窗口中的Resources文件夹下，右键创建一个OpenAIConfiguration
 
-![image-20240306171114489](Images\image-20240306171114489.png)
+![image-20240306171114489](Images/image-20240306171114489.png)
 
 2、在该资源对应的Inspector视图中，填写OpenAI的key以及organization id。
 
-![image-20240306171253092](Images\image-20240306171253092.png)
+![image-20240306171253092](Images/image-20240306171253092.png)
 
 ### 快速入门
 
 1、在Scripts/TeamFlow/Data/Resources文件夹下，有名为AssistantData和FileData的SO文件，如果没有，请通过右键-Create Asset-TeamFlow菜单创建一个。
 
-![image-20240306171900770](Images\image-20240306171900770.png)
+![image-20240306171900770](Images/image-20240306171900770.png)
 
-![image-20240306172107020](C:\Users\57862\AppData\Roaming\Typora\typora-user-images\image-20240306172107020.png)
+![image-20240306172107020](Images/image-20240306172107020.png)
 
 2、在第1步中所示的同样菜单下，有一个TeamFlow Graph的选项，可以点击创建在自己喜欢的地方。
 
 3、双击创建出的资源，可打开工作流的可视化编辑界面
 
-![image-20240306172331499](Images\image-20240306172331499.png)
+![image-20240306172331499](Images/image-20240306172331499.png)
 
 4、在XNode的画布中，右键选择创建节点后，可以看到可创建的所有类型节点的目录，并支持搜索功能
 
-![image-20240306172446378](Images\image-20240306172446378.png)
+![image-20240306172446378](Images/image-20240306172446378.png)
 
 5、如下图所示，可以创建出对应的节点，过程中，一些助手可能需要自己创建，因为这与你自己的OpenAI后台的数据是同步的，我这里有这些助手是因为已经存在于OpenAI服务器中。
 
-![image-20240306172541261](Images\image-20240306172541261.png)
+![image-20240306172541261](Images/image-20240306172541261.png)
 
 6、全部完成后，点击初始化工作流，再点击开始运行即可运行本工作流。
 
