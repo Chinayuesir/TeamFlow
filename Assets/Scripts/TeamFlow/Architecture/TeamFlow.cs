@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Mail;
 using System.Net.Mime;
 using Cysharp.Threading.Tasks;
 using QFramework;
 using TeamFlow.Utilities;
+using UnityEditor;
 using UnityEngine;
 
 namespace TeamFlow
@@ -31,6 +33,38 @@ namespace TeamFlow
         protected override void Init()
         {
             RegisterUtility(new OpenAIUtility());
+            MDViewer.DuplicateCodeEvent.Register(id =>
+            {
+                EditorGUIUtility.systemCopyBuffer = MDViewer.CodeBlocks[id].codeBlock;
+            });
+            MDViewer.SaveCodeToFileEvent.Register(id =>
+            {
+                string defaultName = "DefaultMonoScript";
+                string path = "Assets/";
+                string extension = "cs";
+                string filePath = EditorUtility.SaveFilePanel("Save file as...", path, defaultName, extension);
+                if (!string.IsNullOrEmpty(filePath))
+                {
+                    string content =   MDViewer.CodeBlocks[id].codeBlock;
+                    try
+                    {
+                        using (StreamWriter writer = new StreamWriter(filePath, false))
+                        {
+                            writer.Write(content);
+                        }
+                        AssetDatabase.Refresh();
+                        Debug.Log($"File successfully saved to: {filePath}");
+                    }
+                    catch (IOException e)
+                    {
+                        Debug.LogError($"Failed to save the file: {e.Message}");
+                    }
+                }
+                else
+                {
+                    Debug.Log("File save action was cancelled or failed.");
+                }
+            });
         }
 
         public static void Reset()

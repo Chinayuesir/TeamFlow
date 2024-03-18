@@ -23,6 +23,7 @@ namespace QFramework
     {
         public static int CodeBlockID = 0;
         public static EasyEvent<int> DuplicateCodeEvent = new EasyEvent<int>();
+        public static EasyEvent<int> SaveCodeToFileEvent = new EasyEvent<int>();
         public static string Text=String.Empty;
         
         // 存储提取的代码块及其语言标识

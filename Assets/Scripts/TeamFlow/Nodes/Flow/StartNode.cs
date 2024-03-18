@@ -17,10 +17,11 @@ namespace TeamFlow.Nodes
         public UnitaskPort next;
 
         [Button("初始化本工作流")]
-        private void InitTeamFlow()
+        private async void InitTeamFlow()
         {
             TeamFlow.Reset();
             TeamFlow.TeamFlowStart.Register(StartGraph);
+            await TeamFlow.SyncFilesAndAssistants();
             Debug.Log("当前工作流已初始化完毕！");
         }
 
@@ -31,10 +32,9 @@ namespace TeamFlow.Nodes
 
         [DisableIf(nameof(IsStarted))]
         [Button("开始运行")]
-        private async void Run()
+        private void Run()
         {
             TeamFlow.TeamFlowState.Value = RunningState.Started;
-            await TeamFlow.SyncFilesAndAssistants();
             TeamFlow.TeamFlowStart.Trigger();
         }
         

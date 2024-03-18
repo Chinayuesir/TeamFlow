@@ -11,6 +11,7 @@
 #if UNITY_EDITOR
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text.RegularExpressions;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
@@ -116,6 +117,28 @@ namespace QFramework
         }
 
         private int mCodeBlockID = -1;
+
+        private void SearchCode()
+        {
+            if (MDViewer.CodeBlocks.Count == 0)
+            {
+                // 正则表达式，用于匹配代码块。匹配 ``` 后的任何非换行字符（语言标识），然后是代码块直到下一个 ```
+                string pattern = @"```(.*?)\n([\s\S]*?)```";
+                // 执行匹配操作
+                MatchCollection matches = Regex.Matches(MDViewer.Text, pattern);
+                foreach (Match match in matches)
+                {
+                    // 确保捕获组存在
+                    if (match.Groups.Count > 2)
+                    {
+                        string language = match.Groups[1].Value.Trim(); // 提取语言标识
+                        string codeBlock = match.Groups[2].Value; // 提取代码块内容
+                        MDViewer.CodeBlocks.Add((language, codeBlock));
+                    }
+                }
+            }
+        }
+
         public override void Draw(MDContext context)
         {
             if (Highlight && !Quoted)
@@ -125,45 +148,27 @@ namespace QFramework
                 mCodeBlockID = MDViewer.CodeBlockID;
                 MDViewer.CodeBlockID++;
                 
-                // 绘制按钮，并在鼠标悬浮时显示提示
                 if (GUI.Button(new Rect(Rect.width - 20, Rect.y + 10, 20, 20), new GUIContent(
-                            SdfIcons.CreateTransparentIconTexture(SdfIconType.ArrowsAngleExpand, 
+                            SdfIcons.CreateTransparentIconTexture(SdfIconType.Save,
                                 Color.white, 20, 20, 0),
-                            "复制代码到剪贴板"  // 这里是悬浮提示文本
+                            "保存代码" // 这里是悬浮提示文本
                         ),
                         GUI.skin.GetStyle("button")))
                 {
-                    // 复制代码段文本到剪贴板的逻辑
-                    //CopyTextToClipboard(mBlocks[0]);
-                    MDViewer.DuplicateCodeEvent.Trigger(mCodeBlockID);
-
-                    if (MDViewer.CodeBlocks.Count == 0)
-                    {
-                        // 正则表达式，用于匹配代码块。匹配 ``` 后的任何非换行字符（语言标识），然后是代码块直到下一个 ```
-                        string pattern = @"```(.*?)\n([\s\S]*?)```";
-
-                        // 执行匹配操作
-                        MatchCollection matches = Regex.Matches(MDViewer.Text, pattern);
-
-                  
-
-                        foreach (Match match in matches)
-                        {
-                            // 确保捕获组存在
-                            if (match.Groups.Count > 2) 
-                            {
-                                string language = match.Groups[1].Value.Trim(); // 提取语言标识
-                                string codeBlock = match.Groups[2].Value; // 提取代码块内容
-                                MDViewer.CodeBlocks.Add((language, codeBlock));
-                            }
-                        }
-                    }
-                    
-                    EditorGUIUtility.systemCopyBuffer = MDViewer.CodeBlocks[mCodeBlockID].codeBlock;
-                    Debug.Log("language:"+MDViewer.CodeBlocks[mCodeBlockID].language);
-                    Debug.Log("code:"+MDViewer.CodeBlocks[mCodeBlockID].codeBlock);
+                    SearchCode();
+                    MDViewer.SaveCodeToFileEvent.Trigger(mCodeBlockID);
                 }
-
+                // 绘制按钮，并在鼠标悬浮时显示提示
+                if (GUI.Button(new Rect(Rect.width - 50, Rect.y + 10, 20, 20), new GUIContent(
+                            SdfIcons.CreateTransparentIconTexture(SdfIconType.ArrowsAngleExpand,
+                                Color.white, 20, 20, 0),
+                            "复制代码到剪贴板" // 这里是悬浮提示文本
+                        ),
+                        GUI.skin.GetStyle("button")))
+                {
+                    SearchCode();
+                    MDViewer.DuplicateCodeEvent.Trigger(mCodeBlockID);
+                }
             }
             else if (IsTableHeader)
             {
