@@ -9,13 +9,7 @@ namespace TeamFlow
     {
         private MDViewer mMarkdownViewer;
         private bool mInited = false;
-
-        [MenuItem("TeamFlow/OpenWindow")]
-        public static void OpenWindow()
-        {
-            GetWindow<DisplayWindow>().Show();
-        }
-
+        
         public void UpdateText(string content)
         {
             if (mMarkdownViewer != null)

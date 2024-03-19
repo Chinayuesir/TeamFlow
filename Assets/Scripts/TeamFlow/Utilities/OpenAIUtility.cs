@@ -97,6 +97,21 @@ namespace TeamFlow.Utilities
             return choice.Message;
         }
 
+        public async UniTask<ChatResponse> GetCompletionStreaming(List<string> settings,string originPrompt,Action<ChatResponse> resultHandler)
+        {
+            
+            var messages = new List<Message>
+            {
+                new Message(Role.System, settings[0]),
+                new Message(Role.User, settings[1]),
+                new Message(Role.Assistant, settings[2]),
+                new Message(Role.User, $"{originPrompt}"),
+            };
+            var chatRequest = new ChatRequest(messages,Model.GPT4);
+            var response = await mApi.ChatEndpoint.StreamCompletionAsync(chatRequest, resultHandler);
+            return response;
+        }
+
 
         /// <summary>
         /// 创建Assistant

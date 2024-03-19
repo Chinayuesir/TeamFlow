@@ -1,0 +1,54 @@
+﻿[
+  {
+    "Name": "ICIO框架",
+    "Content": "Instruction: 指令, Context: 背景信息, Input Data: 输入数据, Output Indicator: 输出引导"
+  },
+  {
+    "Name": "CRISPE框架",
+    "Content": "Capacity and Role: 能力和角色, Insight: 见解, Statement: 声明, Personality: 个性, Experiment: 实验"
+  },
+  {
+    "Name": "BROKE框架",
+    "Content": "Background: 背景, Role: 角色, Objectives: 目标, Key Result: 关键结果, Evolve: 试验并改进"
+  },
+  {
+    "Name": "APE框架",
+    "Content": "ACTION: 行动, PURPOSE: 目的, EXPECTATION: 期望"
+  },
+  {
+    "Name": "COAST框架",
+    "Content": "CONTEXT: 上下文背景, OBJECTIVE: 目的, ACTION: 行动, SCENARIO: 方案, TASK: 任务"
+  },
+  {
+    "Name": "TAG框架",
+    "Content": "TASK: 任务, ACTION: 行动, GOAL: 目标"
+  },
+  {
+    "Name": "RISE框架",
+    "Content": "ROLE: 角色, INPUT: 输入, STEPS: 步骤, EXPECTATION: 期望"
+  },
+  {
+    "Name": "TRACE框架",
+    "Content": "TASK: 任务, REQUEST: 请求, ACTION: 行动, CONTEXT: 上下文, EXAMPLE: 示例"
+  },
+  {
+    "Name": "ERA框架",
+    "Content": "EXPECTATION: 期望, ROLE: 角色, ACTION: 行动"
+  },
+  {
+    "Name": "CARE框架",
+    "Content": "CONTEXT: 上下文, ACTION: 行动, RESULT: 结果, EXAMPLE: 示例"
+  },
+  {
+    "Name": "ROSES框架",
+    "Content": "ROLE: 角色, OBJECTIVE: 目的, SCENARIO: 方案, EXPECTED SOLUTION: 解决方案, STEPS: 步骤"
+  },
+  {
+    "Name": "RACE框架",
+    "Content": "ROLE: 角色, ACTION: 行动, CONTEXT: 背景, EXPECTATION: 期望"
+  },
+  {
+    "Name": "PATFU框架",
+    "Content": "Problem: 问题, Aera: 领域, Task: 任务, Format: 格式, Update: 迭代"
+  }
+]

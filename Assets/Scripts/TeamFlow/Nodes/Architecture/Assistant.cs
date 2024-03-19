@@ -5,6 +5,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using QFramework;
 using Sirenix.OdinInspector;
+using Sirenix.OdinInspector.Editor;
 using TeamFlow.Utilities;
 using UnityEditor;
 using UnityEngine;
@@ -13,49 +14,39 @@ using Tool = OpenAI.Tool;
 namespace TeamFlow
 {
     [Serializable]
-    public class Assistant:IController
+    public class Assistant : IController
     {
-        [DisableInEditorMode]
-        [LabelText("助手ID")]
+        [DisableInEditorMode] [LabelText("助手ID")]
         public string ID;
-        
-        [OnValueChanged(nameof(OnAssistantNameChanged))]
-        [LabelText("助手名称")]
+
+        [OnValueChanged(nameof(OnAssistantNameChanged))] [LabelText("助手名称")]
         public string Name;
-        
+
         [LabelText("助手指令设置")]
         [OnValueChanged(nameof(OnInfoChanged))]
-        [TextArea(4,10)]
-        [CustomContextMenu("Say Hello/Twice", "SayHello")]
+        [TextArea(4, 10)]
+        [CustomContextMenu("AI优化/提示词优化", "RefinePrompt")]
+        [CustomContextMenu("AI优化/提示词转英文", "TranslatePrompt")]
         public string Instructions;
-        
-        private void SayHello()
-        {
-            Debug.Log("Hello Twice");
-        }
-        
-        [OnValueChanged(nameof(OnInfoChanged))]
-        [LabelText("模型选择")]
-        public AssistantModelType Model=AssistantModelType.GPT3_5_Turbo;
-        
-        [HorizontalGroup(Width = 0.5f)]
-        [LabelText("检索功能")]
-        [OnValueChanged(nameof(OnInfoChanged))]
+
+
+        [OnValueChanged(nameof(OnInfoChanged))] [LabelText("模型选择")]
+        public AssistantModelType Model = AssistantModelType.GPT3_5_Turbo;
+
+        [HorizontalGroup(Width = 0.5f)] [LabelText("检索功能")] [OnValueChanged(nameof(OnInfoChanged))]
         public bool RetrieveOpen;
-        
-        [HorizontalGroup(Width = 0.5f)]
-        [LabelText("代码解释器")]
-        [OnValueChanged(nameof(OnInfoChanged))]
+
+        [HorizontalGroup(Width = 0.5f)] [LabelText("代码解释器")] [OnValueChanged(nameof(OnInfoChanged))]
         public bool CodeInterpreterOpen;
-        
-        
-        [HorizontalGroup("group2",Width = 0.8f)]
+
+
+        [HorizontalGroup("group2", Width = 0.8f)]
         [ShowIf(nameof(RetrieveOpen))]
         [LabelText("选择文件")]
         [ValueDropdown(nameof(GetFilesFromServer))]
         public string ToAddFile;
-        
-        [HorizontalGroup("group2",Width = 0.2f)]
+
+        [HorizontalGroup("group2", Width = 0.2f)]
         [ShowIf(nameof(RetrieveOpen))]
         [Button("链接文件")]
         private async void AttackFileToAssistant()
@@ -65,32 +56,32 @@ namespace TeamFlow
             var file = await mOpenAIUtility.GetFileInfoAsync(toAddFile.FileID);
             await mOpenAIUtility.AttachAssistantFile(ID, file);
             AssistantFiles.Add(toAddFile);
-            toAddFile.AssistantInfoList.Add(Name+"---"+ID);;
+            toAddFile.AssistantInfoList.Add(Name + "---" + ID);
+            ;
         }
-        
-        [ShowIf(nameof(RetrieveOpen))]
-        public List<TeamFlowFile> AssistantFiles;
-        
+
+        [ShowIf(nameof(RetrieveOpen))] public List<TeamFlowFile> AssistantFiles;
+
         private IEnumerable<string> GetFilesFromServer()
         {
             return TeamFlow.Files.Select(file => file.FileName);
         }
 
-        
-        [GUIColor(0,1,0)]
+
+        [GUIColor(0, 1, 0)]
         [ShowIf(nameof(mOnInfoChanged))]
         [Button("更新助手信息到服务器")]
         private async void UpdateAssistantToServer()
-        { 
+        {
             mOpenAIUtility ??= this.GetUtility<OpenAIUtility>();
             var tools = new List<Tool>();
-            if(RetrieveOpen) tools.Add(Tool.Retrieval);
-            if(CodeInterpreterOpen) tools.Add(Tool.CodeInterpreter);
-            var assistant = await mOpenAIUtility.ModifyAssistant(ID,Name,Instructions,Model,tools);
+            if (RetrieveOpen) tools.Add(Tool.Retrieval);
+            if (CodeInterpreterOpen) tools.Add(Tool.CodeInterpreter);
+            var assistant = await mOpenAIUtility.ModifyAssistant(ID, Name, Instructions, Model, tools);
             await TeamFlow.SyncFilesAndAssistants();
             mOnInfoChanged = false;
         }
-        
+
         [ShowIf(nameof(HasCreated))]
         [Button("删除助手")]
         private async void DeleteAssistant()
@@ -100,8 +91,8 @@ namespace TeamFlow
             await mOpenAIUtility.DeleteAssistant(ID);
             await TeamFlow.SyncFilesAndAssistants();
         }
-        
-      
+
+
         [HideIf(nameof(HasCreated))]
         [Button("创建助手")]
         private async void CreateAssistant()
@@ -109,9 +100,9 @@ namespace TeamFlow
             mOpenAIUtility ??= this.GetUtility<OpenAIUtility>();
             if (await mOpenAIUtility.RetrieveAssistant(ID) == null) return;
             var tools = new List<Tool>();
-            if(RetrieveOpen) tools.Add(Tool.Retrieval);
-            if(CodeInterpreterOpen) tools.Add(Tool.CodeInterpreter);
-            var assistant = await mOpenAIUtility.CreateAssistant(Name,Instructions,Model,tools);
+            if (RetrieveOpen) tools.Add(Tool.Retrieval);
+            if (CodeInterpreterOpen) tools.Add(Tool.CodeInterpreter);
+            var assistant = await mOpenAIUtility.CreateAssistant(Name, Instructions, Model, tools);
             ID = assistant.Id;
             await TeamFlow.SyncFilesAndAssistants();
             HasCreated = true;
@@ -127,8 +118,8 @@ namespace TeamFlow
             public bool RetrieveOpen;
             public bool CodeInterpreterOpen;
         }
-        
-        
+
+
         [FoldoutGroup("通过Json读取")]
         [Button("保存助手")]
         private void SaveAssistantToFile()
@@ -144,13 +135,13 @@ namespace TeamFlow
             };
 
             string json = JsonConvert.SerializeObject(assistantData, Formatting.Indented);
-    
+
             // 指定文件路径和名称
             if (!Directory.Exists("Assets/Resources/Assistants"))
             {
                 Directory.CreateDirectory("Assets/Resources/Assistants");
             }
-            
+
             string filePath = $"Assets/Resources/Assistants/{Name}.json";
             try
             {
@@ -158,6 +149,7 @@ namespace TeamFlow
                 {
                     writer.Write(json);
                 }
+
                 AssetDatabase.Refresh();
                 Debug.Log($"File successfully saved to: {filePath}");
             }
@@ -165,17 +157,18 @@ namespace TeamFlow
             {
                 Debug.LogError($"Failed to save the file: {e.Message}");
             }
+
             Debug.Log("助手数据已保存到文件");
         }
-        
+
         [FoldoutGroup("通过Json读取")]
         [Button("加载助手")]
         public void LoadAssistantFromFile()
         {
             string filePath = $"Assets/Resources/Assistants/";
-            if (File.Exists(filePath+LoadName))
+            if (File.Exists(filePath + LoadName))
             {
-                string json = File.ReadAllText(filePath+LoadName);
+                string json = File.ReadAllText(filePath + LoadName);
                 var assistantData = JsonConvert.DeserializeObject<SaveAssistant>(json);
                 this.ID = assistantData.ID;
                 this.Name = assistantData.Name;
@@ -190,25 +183,24 @@ namespace TeamFlow
                 Debug.LogError("指定的文件不存在");
             }
         }
-        
+
         [FoldoutGroup("通过Json读取")]
         [LabelText("选择本地助手文件")]
         [ValueDropdown("GetAllAssistantNames", AppendNextDrawer = true)]
         public string LoadName;
-        
+
         private IEnumerable<string> GetAllAssistantNames()
         {
             string filePath = $"Assets/Resources/Assistants/";
-            List<string> files= Directory.GetFiles(filePath).ToList();
+            List<string> files = Directory.GetFiles(filePath).ToList();
             return files
-                .Where(path=>!path.EndsWith(".meta"))
+                .Where(path => !path.EndsWith(".meta"))
                 .Select(path => path.Split('/').Last());
         }
-        
+
         private OpenAIUtility mOpenAIUtility;
-        private bool mOnInfoChanged=false;
-        [HideInInspector]
-        public bool HasCreated = false;
+        private bool mOnInfoChanged = false;
+        [HideInInspector] public bool HasCreated = false;
 
         private void OnInfoChanged()
         {
@@ -216,64 +208,41 @@ namespace TeamFlow
             mOnInfoChanged = true;
             Debug.Log("数据改变！");
         }
-        
+
         private void OnAssistantNameChanged()
         {
             HasCreated = false;
             Debug.Log("数据改变！");
         }
 
+        private void RefinePrompt()
+        {
+            var window = OdinEditorWindow.GetWindow<PromptRefineWindow>();
+            if (PromptFramework.FrameworkDic.Count == 0)
+            {
+                PromptFramework.LoadFromJson();
+            }
+            window.ShowWindow(Instructions,"提示词优化", resultPrompt =>
+            {
+                Instructions = resultPrompt;
+                mOnInfoChanged = true;
+            });
+        }
+        
+        private void TranslatePrompt()
+        {
+            var window = OdinEditorWindow.GetWindow<PromptRefineWindow>();
+            window.ShowWindow(Instructions,"提示词转英文", resultPrompt =>
+            {
+                Instructions = resultPrompt;
+                mOnInfoChanged = true;
+            });
+        }
+        
+
         public IArchitecture GetArchitecture()
         {
             return TeamFlow.Interface;
-        }
-    }
-    
-    // 自定义 PropertyDrawer
-    [CustomPropertyDrawer(typeof(TextAreaAttribute))]
-    public class CustomTextAreaDrawer : PropertyDrawer
-    {
-        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
-        {
-            // 使用默认的 TextArea 控件来绘制文本区域
-            EditorGUI.BeginProperty(position, label, property);
-            EditorGUI.LabelField(position, label);
-
-            position = EditorGUI.PrefixLabel(position, GUIUtility.GetControlID(FocusType.Passive), label);
-            string value = EditorGUI.TextArea(position, property.stringValue);
-
-            if (property.stringValue != value)
-            {
-                property.stringValue = value;
-            }
-
-            EditorGUI.EndProperty();
-            Debug.Log("sss");
-            // 检查鼠标事件是否为右键点击
-            Event e = Event.current;
-            if (e.type == EventType.ContextClick && position.Contains(e.mousePosition))
-            {
-                // 创建并显示右键菜单
-                GenericMenu menu = new GenericMenu();
-                menu.AddItem(new GUIContent("润色"), false, () => CustomAction(property));
-                menu.ShowAsContext();
-
-                e.Use();
-            }
-        }
-
-        private void CustomAction(SerializedProperty property)
-        {
-            Debug.Log("润色以下文本: " + property.name);
-            // 在这里添加您想要的操作，比如修改 property 的值
-        }
-
-        // 重写这个方法以提供足够的空间绘制文本区域
-        public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
-        {
-            TextAreaAttribute textAreaAttribute = attribute as TextAreaAttribute;
-            return EditorGUIUtility.singleLineHeight *
-                   Mathf.Max(textAreaAttribute.minLines, textAreaAttribute.maxLines);
         }
     }
 }

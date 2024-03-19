@@ -33,6 +33,10 @@ namespace TeamFlow
         protected override void Init()
         {
             RegisterUtility(new OpenAIUtility());
+            if (PromptFramework.FrameworkDic.Count == 0)
+            {
+                PromptFramework.LoadFromJson();
+            }
             MDViewer.DuplicateCodeEvent.Register(id =>
             {
                 EditorGUIUtility.systemCopyBuffer = MDViewer.CodeBlocks[id].codeBlock;

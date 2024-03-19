@@ -37,7 +37,7 @@ namespace TeamFlow.Nodes
             }
         }
         
-        private async void AssistantChanged()
+        private void AssistantChanged()
         {
             var asst= TeamFlow.Assistants.Find(assistant => assistant.Name == AssistantName);
             Assistant = asst;
