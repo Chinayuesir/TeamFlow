@@ -33,8 +33,8 @@ namespace TeamFlow.Utilities
 
     public class OpenAIUtility : IUtility
     {
-        private readonly OpenAIClient mApi= new OpenAIClient(new OpenAIAuthentication()
-            .LoadFromAsset(Resources.Load<OpenAIConfiguration>("OpenAIConfiguration")));
+        private readonly OpenAIClient mApi= 
+            new OpenAIClient(Resources.Load<OpenAIConfiguration>("AIGateway"));
 
         private string mDefaultSystemMessage = "你是一个有用的问答助手";
 

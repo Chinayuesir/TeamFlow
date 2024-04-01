@@ -80,6 +80,10 @@ namespace TeamFlow.Nodes
         {
             string fullPath = Path.Combine(mFolderPath, mFileName);
             string jsonContent = JsonConvert.SerializeObject(normalMemory);
+            if (!Directory.Exists(mFolderPath))
+            {
+                Directory.CreateDirectory(mFolderPath);
+            }
             File.WriteAllText(fullPath, jsonContent);
         }
     }

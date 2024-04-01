@@ -90,6 +90,7 @@ namespace TeamFlow
             // 从服务器获取数据
             var assistantList = await Interface.GetUtility<OpenAIUtility>().ListAssistant();
             Assistants.Clear();
+            if (assistantList == null) return;
 
             foreach (var item in assistantList.Items)
             {
@@ -153,6 +154,7 @@ namespace TeamFlow
             // 从服务器获取数据
             var fileList = await Interface.GetUtility<OpenAIUtility>().ListFilesAsync();
             Files.Clear();
+            if (fileList == null) return;
             foreach (var item in fileList)
             {
                 TeamFlowFile file = new TeamFlowFile()
