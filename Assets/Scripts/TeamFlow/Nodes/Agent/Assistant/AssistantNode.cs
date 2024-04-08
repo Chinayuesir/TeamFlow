@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using QFramework;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using TeamFlow.Utilities;
 using XNode;
 
@@ -25,6 +27,22 @@ namespace TeamFlow.Nodes
         public Assistant Assistant;
         
         private OpenAIUtility mOpenAIUtility;
+        
+        /// <summary>
+        /// 自定义函数
+        /// </summary>
+        [LabelText("自定义函数")]
+        [Output(ShowBackingValue.Never, ConnectionType.Override, dynamicPortList = true)]
+        [OnCollectionChanged(After = "OnDynamicPortListChange")]
+        [ListDrawerSettings(ShowIndexLabels = true,CustomAddFunction = "AddFunctionPort")]
+        [NonSerialized,OdinSerialize]
+        public List<FunctionPort> FunctionPorts=new List<FunctionPort>();
+
+        private FunctionPort AddFunctionPort()
+        {
+            return new FunctionPort();
+        }
+
 
         protected override void Init()
         {
@@ -53,9 +71,10 @@ namespace TeamFlow.Nodes
         {
             if (port.fieldName == "result")
             {
-                return TeamFlow.Assistants.Find(assistant => assistant.Name == AssistantName);
+                var assistant= TeamFlow.Assistants.Find(assistant => assistant.Name == AssistantName);
+                return assistant;
             }
-            return null;
+            else return null;
         }
 
         public IArchitecture GetArchitecture()

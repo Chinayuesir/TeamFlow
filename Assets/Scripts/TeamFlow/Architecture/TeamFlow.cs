@@ -8,6 +8,7 @@ using QFramework;
 using TeamFlow.Utilities;
 using UnityEditor;
 using UnityEngine;
+using Tool = OpenAI.Tool;
 
 namespace TeamFlow
 {
@@ -96,12 +97,17 @@ namespace TeamFlow
             {
                 bool codeInterpreterOpen = false;
                 bool retrieveOpen = false;
+                var toolList = new List<Tool>();
                 foreach (var tool in item.Tools)
                 {
                     if (tool.Type == "retrieval")
                         retrieveOpen = true;
-                    if (tool.Type == "code_interpreter")
+                    else if (tool.Type == "code_interpreter")
                         codeInterpreterOpen = true;
+                    else
+                    {
+                        toolList.Add(tool);
+                    }
                 }
 
                 var assistant = new Assistant()

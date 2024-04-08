@@ -23,7 +23,7 @@ namespace TeamFlow.Nodes
             if(mGUID=="")  mGUID = Guid.NewGuid().ToString();
         }
         /// <summary>
-        /// 下一个动作
+        /// 上一个动作
         /// </summary>
         [Required]
         [Input(ShowBackingValue.Never)]

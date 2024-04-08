@@ -157,7 +157,26 @@ namespace TeamFlow.Utilities
             var request = new CreateMessageRequest(content);
             var message = await thread.CreateMessageAsync(request);
             var run = await thread.CreateRunAsync(assistant);
-            await run.WaitForRunCompleteAsync();
+
+            if (assistant.Tools.Count == 0)
+            {
+                await run.WaitForRunCompleteAsync();
+            }
+            else
+            {
+                run = await run.WaitForStatusChangeAsync();
+                var toolOutputs = await assistant.GetToolOutputsAsync(run.RequiredAction.SubmitToolOutputs.ToolCalls);
+
+                foreach (var toolOutput in toolOutputs)
+                {
+                    Debug.Log($"tool call output: {toolOutput.Output}");
+                }
+                // submit the tool outputs
+                run = await run.SubmitToolOutputsAsync(toolOutputs);
+                // waiting while run in Queued and InProgress
+                run = await run.WaitForStatusChangeAsync();
+                await run.WaitForRunCompleteAsync();
+            }
             var messages= await run.ListMessagesAsync();
             foreach (var messageResponse in messages.Items)
             {

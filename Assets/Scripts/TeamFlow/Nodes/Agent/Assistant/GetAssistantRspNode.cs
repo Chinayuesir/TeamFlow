@@ -98,7 +98,8 @@ namespace TeamFlow.Nodes
             }
             try
             {
-                assistantRsp = await mOpenAIUtility.RetrieveAssistant(GetInputValue("assistant", this.assistant).ID);
+                string id = GetInputValue("assistant", this.assistant).ID;
+                assistantRsp = await mOpenAIUtility.RetrieveAssistant(id);
                 // 获取响应并赋值给result
                 result = await mOpenAIUtility.GetAssistantResponse(assistantRsp, thread,
                     GetInputValue("prompt", this.prompt));
