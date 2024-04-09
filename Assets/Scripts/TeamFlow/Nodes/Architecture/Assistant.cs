@@ -29,17 +29,24 @@ namespace TeamFlow
         [CustomContextMenu("AI优化/提示词优化", "RefinePrompt")]
         [CustomContextMenu("AI优化/提示词转英文", "TranslatePrompt")]
         public string Instructions;
-
-
+        
         [OnValueChanged(nameof(OnInfoChanged))] [LabelText("模型选择")]
         public AssistantModelType Model = AssistantModelType.GPT3_5_Turbo;
-
-        [HorizontalGroup(Width = 0.5f)] [LabelText("检索功能")] [OnValueChanged(nameof(OnInfoChanged))]
-        public bool RetrieveOpen;
-
+        
         [HorizontalGroup(Width = 0.5f)] [LabelText("代码解释器")] [OnValueChanged(nameof(OnInfoChanged))]
         public bool CodeInterpreterOpen;
 
+        //内部属性
+        private OpenAIUtility mOpenAIUtility;
+        private bool mOnInfoChanged = false;
+        [HideInInspector] public bool HasCreated = false;
+        
+        
+        #region 检索文件相关
+
+        [HorizontalGroup(Width = 0.5f)] [LabelText("检索功能")] [OnValueChanged(nameof(OnInfoChanged))]
+        public bool RetrieveOpen;
+        
         [HorizontalGroup("group2", Width = 0.8f)]
         [ShowIf(nameof(RetrieveOpen))]
         [LabelText("选择文件")]
@@ -65,8 +72,10 @@ namespace TeamFlow
         {
             return TeamFlow.Files.Select(file => file.FileName);
         }
+        
+        #endregion
+        #region 自定义函数相关
 
-    
         public List<Tool> FunctionTools = new List<Tool>();
 
         public void AddCustomFunctionTool(Tool function)
@@ -85,34 +94,8 @@ namespace TeamFlow
             mOnInfoChanged = true;
         }
 
-        [GUIColor(0, 1, 0)]
-        [ShowIf(nameof(mOnInfoChanged))]
-        [Button("更新助手信息到服务器")]
-        private async void UpdateAssistantToServer()
-        {
-            mOpenAIUtility ??= this.GetUtility<OpenAIUtility>();
-            var tools = new List<Tool>();
-            if (RetrieveOpen) tools.Add(Tool.Retrieval);
-            if (CodeInterpreterOpen) tools.Add(Tool.CodeInterpreter);
-            foreach (var tool in FunctionTools)
-            {
-               tools.Add(tool);   
-            }
-            var assistant = await mOpenAIUtility.ModifyAssistant(ID, Name, Instructions, Model, tools);
-            await TeamFlow.SyncFilesAndAssistants();
-            mOnInfoChanged = false;
-        }
-
-        [ShowIf(nameof(HasCreated))]
-        [Button("删除助手")]
-        private async void DeleteAssistant()
-        {
-            if (!HasCreated) return;
-            mOpenAIUtility ??= this.GetUtility<OpenAIUtility>();
-            await mOpenAIUtility.DeleteAssistant(ID);
-            await TeamFlow.SyncFilesAndAssistants();
-        }
-
+        #endregion
+        #region 助手操作
 
         [HideIf(nameof(HasCreated))]
         [Button("创建助手")]
@@ -136,8 +119,39 @@ namespace TeamFlow
             HasCreated = true;
             mOnInfoChanged = false;
         }
+        
+        [ShowIf(nameof(HasCreated))]
+        [Button("删除助手")]
+        private async void DeleteAssistant()
+        {
+            if (!HasCreated) return;
+            mOpenAIUtility ??= this.GetUtility<OpenAIUtility>();
+            await mOpenAIUtility.DeleteAssistant(ID);
+            await TeamFlow.SyncFilesAndAssistants();
+        }
 
-        private class SaveAssistant
+        [GUIColor(0, 1, 0)]
+        [ShowIf(nameof(mOnInfoChanged))]
+        [Button("更新助手信息到服务器")]
+        private async void UpdateAssistantToServer()
+        {
+            mOpenAIUtility ??= this.GetUtility<OpenAIUtility>();
+            var tools = new List<Tool>();
+            if (RetrieveOpen) tools.Add(Tool.Retrieval);
+            if (CodeInterpreterOpen) tools.Add(Tool.CodeInterpreter);
+            foreach (var tool in FunctionTools)
+            {
+                tools.Add(tool);   
+            }
+            await mOpenAIUtility.ModifyAssistant(ID, Name, Instructions, Model, tools);
+            await TeamFlow.SyncFilesAndAssistants();
+            mOnInfoChanged = false;
+        }
+        
+        #endregion
+        #region 助手Json存取
+
+          private class SaveAssistant
         {
             public string ID;
             public string Name;
@@ -146,8 +160,7 @@ namespace TeamFlow
             public bool RetrieveOpen;
             public bool CodeInterpreterOpen;
         }
-
-
+          
         [FoldoutGroup("通过Json读取")]
         [Button("保存助手")]
         private void SaveAssistantToFile()
@@ -217,6 +230,8 @@ namespace TeamFlow
         [ValueDropdown("GetAllAssistantNames", AppendNextDrawer = true)]
         public string LoadName;
 
+        #endregion
+        
         private IEnumerable<string> GetAllAssistantNames()
         {
             string filePath = $"Assets/Resources/Assistants/";
@@ -225,11 +240,7 @@ namespace TeamFlow
                 .Where(path => !path.EndsWith(".meta"))
                 .Select(path => path.Split('/').Last());
         }
-
-        private OpenAIUtility mOpenAIUtility;
-        private bool mOnInfoChanged = false;
-        [HideInInspector] public bool HasCreated = false;
-
+        
         private void OnInfoChanged()
         {
             if (!HasCreated) return;
@@ -243,6 +254,9 @@ namespace TeamFlow
             Debug.Log("数据改变！");
         }
 
+        /// <summary>
+        /// 提示词优化
+        /// </summary>
         private void RefinePrompt()
         {
             var window = OdinEditorWindow.GetWindow<PromptRefineWindow>();
@@ -257,6 +271,9 @@ namespace TeamFlow
             });
         }
         
+        /// <summary>
+        /// 提示词翻译为英文
+        /// </summary>
         private void TranslatePrompt()
         {
             var window = OdinEditorWindow.GetWindow<PromptRefineWindow>();
@@ -267,7 +284,6 @@ namespace TeamFlow
             });
         }
         
-
         public IArchitecture GetArchitecture()
         {
             return TeamFlow.Interface;

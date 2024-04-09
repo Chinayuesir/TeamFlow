@@ -11,8 +11,7 @@ namespace TeamFlow.Nodes
         [LabelText("自定义函数")]
         public FunctionPort CustomFunction;
 
-        public Tool ToolFromFunc { get; protected set; }
-
+        protected Tool ToolFromFunc { get; set; }
         private AssistantNode mAssistantNode;
 
         #region xNode
@@ -32,11 +31,13 @@ namespace TeamFlow.Nodes
                 }
             }
         }
-
         public override void OnRemoveConnection(NodePort port)
         {
-            mAssistantNode.Assistant.RemoveCustomFunctionTool(ToolFromFunc);
-            mAssistantNode = null;
+            if (mAssistantNode != null)
+            {
+                mAssistantNode.Assistant.RemoveCustomFunctionTool(ToolFromFunc);
+                mAssistantNode = null;
+            }
         }
 
         protected abstract override void Init();

@@ -15,14 +15,14 @@ namespace TeamFlow.Nodes
         /// </summary>
         [Output(ShowBackingValue.Never, ConnectionType.Override)]
         [LabelText("结果为真(true)")]
-        public UnitaskPort trueNext;
+        public UniTaskPort trueNext;
 
         /// <summary>
         /// 下一个动作
         /// </summary>
         [Output(ShowBackingValue.Never, ConnectionType.Override)]
         [LabelText("结果为假(false)")]
-        public UnitaskPort falseNext;
+        public UniTaskPort falseNext;
         
         /// <summary>
         /// 结果

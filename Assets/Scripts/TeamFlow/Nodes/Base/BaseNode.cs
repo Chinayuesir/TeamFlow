@@ -28,14 +28,14 @@ namespace TeamFlow.Nodes
         [Required]
         [Input(ShowBackingValue.Never)]
         [LabelText("上一个动作")]
-        public UnitaskPort previous;
+        public UniTaskPort previous;
         /// <summary>
         /// 下一个动作
         /// </summary>
         [Output(ShowBackingValue.Never, ConnectionType.Override)]
         [LabelText("下一个动作")]
         [ShowIf("showNext")]
-        public UnitaskPort next;
+        public UniTaskPort next;
         
         /// <summary>
         /// 是否显示下一个接口

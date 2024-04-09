@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Cysharp.Threading.Tasks;
 using OpenAI;
+using Sirenix.OdinInspector;
 
 namespace TeamFlow.Nodes
 {
+    [NodeTitle("获取天气信息","自定义函数",SdfIconType.Puzzle)]
     public class GetWeather:FunctionNode
     {
         protected override void Init()
@@ -24,16 +25,14 @@ namespace TeamFlow.Nodes
                                " Typically this is based on the users location.")] WeatherUnit unit)
         {
             var temp = new Random().Next(-10, 40);
-
             temp = unit switch
             {
                 WeatherUnit.Fahrenheit => CelsiusToFahrenheit(temp),
                 _ => temp
             };
-
             return await Task.FromResult($"The current weather in {location} is {temp}\u00b0 {unit}");
         }
 
-        public static int CelsiusToFahrenheit(int celsius) => (celsius * 9 / 5) + 32;
+        private static int CelsiusToFahrenheit(int celsius) => (celsius * 9 / 5) + 32;
     }
 }

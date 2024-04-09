@@ -19,7 +19,7 @@ namespace TeamFlow.Nodes
         public Assistant result;
         
         [LabelText("选择助手")]
-        [ValueDropdown("GetAssistantList", AppendNextDrawer = true)]
+        [ValueDropdown(nameof(GetAssistantList), AppendNextDrawer = true)]
         [OnValueChanged("AssistantChanged")]
         public string AssistantName;
         
@@ -37,7 +37,6 @@ namespace TeamFlow.Nodes
         [ListDrawerSettings(ShowIndexLabels = true,CustomAddFunction = "AddFunctionPort")]
         [NonSerialized,OdinSerialize]
         public List<FunctionPort> FunctionPorts=new List<FunctionPort>();
-
         private FunctionPort AddFunctionPort()
         {
             return new FunctionPort();

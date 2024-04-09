@@ -97,7 +97,7 @@ namespace TeamFlow
             {
                 bool codeInterpreterOpen = false;
                 bool retrieveOpen = false;
-                var toolList = new List<Tool>();
+                var toolList = new List<Tool>(); //记录所有的工具，以便后续可能会用到
                 foreach (var tool in item.Tools)
                 {
                     if (tool.Type == "retrieval")
@@ -134,12 +134,9 @@ namespace TeamFlow
                         }
                     }
                 }
-
                 Assistants.Add(assistant);
             }
-
             Debug.Log("可用助手列表同步完毕！");
-
             // 更新本地数据
             AssistantData localData = Resources.Load<AssistantData>("AssistantData");
             if (localData == null)
@@ -149,10 +146,9 @@ namespace TeamFlow
                 UnityEditor.AssetDatabase.CreateAsset(localData,
                     "Assets/Scripts/TeamFlow/Data/Resources/AssistantData.asset");
             }
-
             localData.assistants = Assistants;
-            UnityEditor.EditorUtility.SetDirty(localData);
-            UnityEditor.AssetDatabase.SaveAssets();
+            EditorUtility.SetDirty(localData);
+            AssetDatabase.SaveAssets();
         }
 
         private static async UniTask SyncFilesWithServer()
@@ -181,15 +177,20 @@ namespace TeamFlow
             {
                 localData = ScriptableObject.CreateInstance<FileData>();
                 //TODO:硬编码，后续优化
-                UnityEditor.AssetDatabase.CreateAsset(localData,
+                AssetDatabase.CreateAsset(localData,
                     "Assets/Scripts/TeamFlow/Data/Resources/FileData.asset");
             }
 
             localData.Files = Files;
-            UnityEditor.EditorUtility.SetDirty(localData);
-            UnityEditor.AssetDatabase.SaveAssets();
+            EditorUtility.SetDirty(localData);
+            AssetDatabase.SaveAssets();
         }
 
+        /// <summary>
+        /// 防止文件名乱码
+        /// </summary>
+        /// <param name="mimeString"></param>
+        /// <returns></returns>
         private static string DecodeMimeString(string mimeString)
         {
             // 判断是否为有效的MIME编码字符串

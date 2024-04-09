@@ -1,5 +1,6 @@
 ﻿using System;
 using QFramework;
+using Sirenix.Utilities;
 using TeamFlow.Nodes;
 using UnityEngine;
 using XNode;
@@ -38,7 +39,7 @@ namespace TeamFlow
                return Color.green;
            else if (type == typeof(string))
                return Color.magenta;
-           else if(type==typeof(UnitaskPort))
+           else if(type==typeof(UniTaskPort))
                return new Color(0.18f, 0.8f, 0.443f);
            else  return new Color(0.18f, 0.8f, 0.443f);;
         }
@@ -49,7 +50,7 @@ namespace TeamFlow
                 return Color.green;
             else if (port.ValueType == typeof(string))
                 return Color.magenta;
-            else if(port.ValueType==typeof(UnitaskPort))
+            else if(port.ValueType==typeof(UniTaskPort))
                 return new Color(0.18f, 0.8f, 0.443f);
             else  return new Color(0.18f, 0.8f, 0.443f);;
         }

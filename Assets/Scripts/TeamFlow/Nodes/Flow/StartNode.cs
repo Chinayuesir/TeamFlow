@@ -14,7 +14,7 @@ namespace TeamFlow.Nodes
     {
         [Output(ShowBackingValue.Never, ConnectionType.Override)]
         [LabelText("下一个动作")]
-        public UnitaskPort next;
+        public UniTaskPort next;
         
         [Button("初始化本工作流")]
         private async void InitTeamFlow()

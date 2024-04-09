@@ -91,18 +91,15 @@ namespace TeamFlow.Nodes
                     Debug.Log(e.Message);
                     thread=await CreateThreadAndSetID();
                 }
-                if (thread == null)
-                {
-                    thread=await CreateThreadAndSetID();
-                }
+                thread??=await CreateThreadAndSetID();
             }
             try
             {
-                string id = GetInputValue("assistant", this.assistant).ID;
+                string id = GetInputValue(nameof(assistant), assistant).ID;
                 assistantRsp = await mOpenAIUtility.RetrieveAssistant(id);
                 // 获取响应并赋值给result
                 result = await mOpenAIUtility.GetAssistantResponse(assistantRsp, thread,
-                    GetInputValue("prompt", this.prompt));
+                    GetInputValue(nameof(prompt), prompt));
             }
             catch (Exception ex)
             {

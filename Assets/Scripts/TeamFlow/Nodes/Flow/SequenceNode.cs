@@ -19,11 +19,11 @@ namespace TeamFlow.Nodes
         [OnCollectionChanged(After = "OnDynamicPortListChange")]
         [ListDrawerSettings(ShowIndexLabels = true,CustomAddFunction = "AddUnitaskPort")]
         [NonSerialized, OdinSerialize]
-        public List<UnitaskPort> unitaskPorts=new List<UnitaskPort>();
+        public List<UniTaskPort> unitaskPorts=new List<UniTaskPort>();
         
-        private UnitaskPort AddUnitaskPort()
+        private UniTaskPort AddUnitaskPort()
         {
-            return new UnitaskPort();
+            return new UniTaskPort();
         }
         
         BaseNode foreachStepNode;

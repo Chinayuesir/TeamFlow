@@ -18,9 +18,11 @@ namespace TeamFlow
         public string Name { get; set; }
         public string Content { get; set; }
         public static Dictionary<string,string> FrameworkDic=new Dictionary<string, string>();
-
         public static string CurrentFrameworkKey = "ROSES框架";
 
+        /// <summary>
+        /// 通过Json加载提示词模板
+        /// </summary>
         public static void LoadFromJson()
         {
             TextAsset textAsset = Resources.Load<TextAsset>("PromptFramework");
@@ -32,6 +34,9 @@ namespace TeamFlow
             }
         }
         
+        /// <summary>
+        /// 打开提示词框架设置面板
+        /// </summary>
         [MenuItem("TeamFlow/提示词框架设置")]
         public static void OpenFrameworkSetting()
         {
@@ -82,11 +87,13 @@ namespace TeamFlow
         }
     }
     
+    /// <summary>
+    /// 提示词优化窗口重写
+    /// </summary>
      public class PromptRefineWindow : OdinEditorWindow, IController
     {
         [TextArea(10, 15)] [PropertyOrder(0)] public string OptimizedPrompt = "";
         private Action<string> mChangePrompt;
-        
         private List<string> mRefinePrompt;
         private List<string> mTranslatePrompt;
 
