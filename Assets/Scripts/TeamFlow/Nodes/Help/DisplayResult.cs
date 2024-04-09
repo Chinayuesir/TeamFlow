@@ -20,7 +20,7 @@ namespace TeamFlow.Nodes
         [Button("打开结果显示窗口")]
         private void 打开结果显示窗口()
         {
-            if (TeamFlow.TeamFlowState.Value==RunningState.Finished)
+            if (TeamFlow.TeamFlowState.Value!=RunningState.Started)
             {
                 var window = EditorWindow.GetWindow<DisplayWindow>();
                 TeamFlow.Result.Value=GetInputValue("result", this.result);

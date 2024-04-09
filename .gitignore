@@ -75,3 +75,5 @@ Assets/Plugins/Sirenix.meta
 Assets/Scripts/TeamFlow/Data/Resources/OpenAIConfiguration.asset
 Assets/Scripts/TeamFlow/Data/Resources/OpenAIConfiguration.asset.meta
 Assets/Scripts/TeamFlow/Tests/
+Assets/Scripts/TeamFlow/Data/Resources/AIGateway.asset.meta
+Assets/Scripts/TeamFlow/Data/Resources/AIGateway.asset
