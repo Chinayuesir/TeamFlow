@@ -1,0 +1,1940 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6625479680966651755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c60614c50c411d98f9b19885111e4a, type: 3}
+  m_Name: "\u663E\u793A\u7ED3\u679C"
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: -6625479680966651755}
+    - {fileID: 3064434020113172788}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: ports
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[XNode.NodePort,
+        XNode]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: result
+    - Name: $v
+      Entry: 7
+      Data: 2|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: result
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: connections
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, XNode]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: result
+    - Name: node
+      Entry: 10
+      Data: 1
+    - Name: reroutePoints
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 0
+    - Name: _connectionType
+      Entry: 3
+      Data: 0
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: previous
+    - Name: $v
+      Entry: 7
+      Data: 6|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: previous
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: TeamFlow.Nodes.UnitaskPort, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: connections
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, XNode]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 8|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: next
+    - Name: node
+      Entry: 10
+      Data: 1
+    - Name: reroutePoints
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 0
+    - Name: _connectionType
+      Entry: 3
+      Data: 0
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: next
+    - Name: $v
+      Entry: 7
+      Data: 10|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: next
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: TeamFlow.Nodes.UnitaskPort, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: connections
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection,
+        XNode]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 1
+    - Name: _connectionType
+      Entry: 3
+      Data: 1
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  graph: {fileID: 11400000}
+  position: {x: 1016, y: -56}
+  mGUID: 29d097f2-43bc-46d2-80e5-74593e29f834
+  showNext: 1
+  nextStepNode: {fileID: 0}
+  result: 
+--- !u!114 &-2862809076057120964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b9d997e4b54f4089d79593f3b004b8, type: 3}
+  m_Name: "\u52A9\u624B"
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: -2862809076057120964}
+    - {fileID: 4250948147979068863}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: ports
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[XNode.NodePort,
+        XNode]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: result
+    - Name: $v
+      Entry: 7
+      Data: 2|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: result
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: TeamFlow.Assistant, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: connections
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, XNode]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: assistant
+    - Name: node
+      Entry: 10
+      Data: 1
+    - Name: reroutePoints
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 1
+    - Name: _connectionType
+      Entry: 3
+      Data: 1
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: FunctionPorts
+    - Name: $v
+      Entry: 7
+      Data: 6|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: FunctionPorts
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: System.Collections.Generic.List`1[[TeamFlow.Nodes.FunctionPort, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
+        Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: connections
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, XNode]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 1
+    - Name: _connectionType
+      Entry: 3
+      Data: 1
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: FunctionPorts
+      Entry: 7
+      Data: 8|System.Collections.Generic.List`1[[TeamFlow.Nodes.FunctionPort, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  graph: {fileID: 11400000}
+  position: {x: -456, y: -8}
+  mGUID: 
+  result:
+    ID: 
+    Name: 
+    Instructions: 
+    Model: 0
+    RetrieveOpen: 0
+    CodeInterpreterOpen: 0
+    ToAddFile: 
+    AssistantFiles: []
+    LoadName: 
+    HasCreated: 0
+  AssistantName: "\u5C0F\u6DA6"
+  Assistant:
+    ID: 
+    Name: 
+    Instructions: 
+    Model: 0
+    RetrieveOpen: 0
+    CodeInterpreterOpen: 0
+    ToAddFile: 
+    AssistantFiles: []
+    LoadName: 
+    HasCreated: 0
+--- !u!114 &-2520493040624127646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b9d997e4b54f4089d79593f3b004b8, type: 3}
+  m_Name: "\u52A9\u624B"
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: -2520493040624127646}
+    - {fileID: 3064434020113172788}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: ports
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[XNode.NodePort,
+        XNode]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: result
+    - Name: $v
+      Entry: 7
+      Data: 2|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: result
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: TeamFlow.Assistant, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: connections
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, XNode]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: assistant
+    - Name: node
+      Entry: 10
+      Data: 1
+    - Name: reroutePoints
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 1
+    - Name: _connectionType
+      Entry: 3
+      Data: 1
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: FunctionPorts
+    - Name: $v
+      Entry: 7
+      Data: 6|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: FunctionPorts
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: System.Collections.Generic.List`1[[TeamFlow.Nodes.FunctionPort, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
+        Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: connections
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, XNode]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 1
+    - Name: _connectionType
+      Entry: 3
+      Data: 1
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: FunctionPorts
+      Entry: 7
+      Data: 8|System.Collections.Generic.List`1[[TeamFlow.Nodes.FunctionPort, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  graph: {fileID: 11400000}
+  position: {x: 168, y: 232}
+  mGUID: 
+  result:
+    ID: 
+    Name: 
+    Instructions: 
+    Model: 0
+    RetrieveOpen: 0
+    CodeInterpreterOpen: 0
+    ToAddFile: 
+    AssistantFiles: []
+    LoadName: 
+    HasCreated: 0
+  AssistantName: "\u5C0F\u8BD1"
+  Assistant:
+    ID: 
+    Name: 
+    Instructions: 
+    Model: 0
+    RetrieveOpen: 0
+    CodeInterpreterOpen: 0
+    ToAddFile: 
+    AssistantFiles: []
+    LoadName: 
+    HasCreated: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3da146b4e84c79b459c267e95524beb0, type: 3}
+  m_Name: "\u6DA6\u8272+\u7FFB\u8BD1"
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  nodes:
+  - {fileID: 6362871689161784886}
+  - {fileID: -2862809076057120964}
+  - {fileID: 4250948147979068863}
+  - {fileID: -2520493040624127646}
+  - {fileID: 3064434020113172788}
+  - {fileID: -6625479680966651755}
+  - {fileID: 2988823647890046601}
+--- !u!114 &2988823647890046601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c60614c50c411d98f9b19885111e4a, type: 3}
+  m_Name: "\u663E\u793A\u7ED3\u679C"
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 2988823647890046601}
+    - {fileID: 4250948147979068863}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: ports
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[XNode.NodePort,
+        XNode]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: result
+    - Name: $v
+      Entry: 7
+      Data: 2|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: result
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: connections
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, XNode]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: result
+    - Name: node
+      Entry: 10
+      Data: 1
+    - Name: reroutePoints
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 0
+    - Name: _connectionType
+      Entry: 3
+      Data: 0
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: previous
+    - Name: $v
+      Entry: 7
+      Data: 6|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: previous
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: TeamFlow.Nodes.UnitaskPort, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: connections
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, XNode]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 8|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: next
+    - Name: node
+      Entry: 10
+      Data: 1
+    - Name: reroutePoints
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 0
+    - Name: _connectionType
+      Entry: 3
+      Data: 0
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: next
+    - Name: $v
+      Entry: 7
+      Data: 10|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: next
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: TeamFlow.Nodes.UnitaskPort, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: connections
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection,
+        XNode]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 1
+    - Name: _connectionType
+      Entry: 3
+      Data: 1
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  graph: {fileID: 11400000}
+  position: {x: 376, y: -136}
+  mGUID: 29d097f2-43bc-46d2-80e5-74593e29f834
+  showNext: 1
+  nextStepNode: {fileID: 0}
+  result: 
+--- !u!114 &3064434020113172788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bb3f7818ef4c688efc0b105c034f4d, type: 3}
+  m_Name: "\u83B7\u53D6\u52A9\u624B\u56DE\u590D"
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 3064434020113172788}
+    - {fileID: -2520493040624127646}
+    - {fileID: 4250948147979068863}
+    - {fileID: -6625479680966651755}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: ports
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[XNode.NodePort,
+        XNode]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: assistant
+    - Name: $v
+      Entry: 7
+      Data: 2|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: assistant
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: TeamFlow.Assistant, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: connections
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, XNode]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: result
+    - Name: node
+      Entry: 10
+      Data: 1
+    - Name: reroutePoints
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 0
+    - Name: _connectionType
+      Entry: 3
+      Data: 0
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: prompt
+    - Name: $v
+      Entry: 7
+      Data: 6|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: prompt
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: connections
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, XNode]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 8|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: result
+    - Name: node
+      Entry: 10
+      Data: 2
+    - Name: reroutePoints
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 0
+    - Name: _connectionType
+      Entry: 3
+      Data: 0
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: result
+    - Name: $v
+      Entry: 7
+      Data: 10|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: result
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: connections
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection,
+        XNode]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 12|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: result
+    - Name: node
+      Entry: 10
+      Data: 3
+    - Name: reroutePoints
+      Entry: 7
+      Data: 13|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 1
+    - Name: _connectionType
+      Entry: 3
+      Data: 0
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: previous
+    - Name: $v
+      Entry: 7
+      Data: 14|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: previous
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: TeamFlow.Nodes.UnitaskPort, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: connections
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection,
+        XNode]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 0
+    - Name: _connectionType
+      Entry: 3
+      Data: 0
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: next
+    - Name: $v
+      Entry: 7
+      Data: 16|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: next
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: TeamFlow.Nodes.UnitaskPort, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: connections
+      Entry: 7
+      Data: 17|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection,
+        XNode]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 18|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: previous
+    - Name: node
+      Entry: 10
+      Data: 3
+    - Name: reroutePoints
+      Entry: 7
+      Data: 19|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 1
+    - Name: _connectionType
+      Entry: 3
+      Data: 1
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  graph: {fileID: 11400000}
+  position: {x: 632, y: -104}
+  mGUID: f88935a1-5767-4116-a173-6c4bd02358a8
+  showNext: 1
+  nextStepNode: {fileID: -6625479680966651755}
+  assistant:
+    ID: 
+    Name: 
+    Instructions: 
+    Model: 0
+    RetrieveOpen: 0
+    CodeInterpreterOpen: 0
+    ToAddFile: 
+    AssistantFiles: []
+    LoadName: 
+    HasCreated: 0
+  prompt: 
+  result: 'Large Language Model (LLM) refers to a deep learning model trained on
+    a large-scale text dataset. It not only has the ability to generate natural language
+    text, but also possesses a deep understanding of the meaning of text, and can
+    handle various natural language tasks such as text summarization, question answering,
+    and translation.
+
+
+    By 2023, the application of large language models in the
+    field of artificial intelligence has become a global hot topic, with particularly
+    notable growth in scale, with the number of parameters soaring from the initial
+    tens of billions to the current one trillion. The increase in the number of parameters
+    enables the model to capture the subtleties of human language more meticulously,
+    and to more deeply understand the complexity of human language. Over the past
+    year, large language models have made significant advancements in absorbing new
+    knowledge, decomposing complex tasks, and aligning text with images. As the technology
+    continues to mature, it will continue to expand its range of applications, providing
+    more intelligent and personalized services for humans, further improving people''s
+    lives and production methods.
+
+
+    On December 26, 2023, the Large Language
+    Model was selected as one of the "Top Ten Science and Technology Terms of 2023".
+    [1-2] [6]'
+  RunningOnNewThread: 1
+  mThreadIDKey: ThreadID_f88935a1-5767-4116-a173-6c4bd02358a8
+--- !u!114 &4250948147979068863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bb3f7818ef4c688efc0b105c034f4d, type: 3}
+  m_Name: "\u83B7\u53D6\u52A9\u624B\u56DE\u590D"
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 4250948147979068863}
+    - {fileID: -2862809076057120964}
+    - {fileID: 3064434020113172788}
+    - {fileID: 2988823647890046601}
+    - {fileID: 6362871689161784886}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: ports
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[XNode.NodePort,
+        XNode]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: assistant
+    - Name: $v
+      Entry: 7
+      Data: 2|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: assistant
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: TeamFlow.Assistant, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: connections
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, XNode]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: result
+    - Name: node
+      Entry: 10
+      Data: 1
+    - Name: reroutePoints
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 0
+    - Name: _connectionType
+      Entry: 3
+      Data: 0
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: prompt
+    - Name: $v
+      Entry: 7
+      Data: 6|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: prompt
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: connections
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, XNode]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 0
+    - Name: _connectionType
+      Entry: 3
+      Data: 0
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: result
+    - Name: $v
+      Entry: 7
+      Data: 8|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: result
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: connections
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, XNode]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 10|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: prompt
+    - Name: node
+      Entry: 10
+      Data: 2
+    - Name: reroutePoints
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: result
+    - Name: node
+      Entry: 10
+      Data: 3
+    - Name: reroutePoints
+      Entry: 7
+      Data: 13|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 1
+    - Name: _connectionType
+      Entry: 3
+      Data: 0
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: previous
+    - Name: $v
+      Entry: 7
+      Data: 14|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: previous
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: TeamFlow.Nodes.UnitaskPort, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: connections
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection,
+        XNode]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 16|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: next
+    - Name: node
+      Entry: 10
+      Data: 4
+    - Name: reroutePoints
+      Entry: 7
+      Data: 17|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 0
+    - Name: _connectionType
+      Entry: 3
+      Data: 0
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: next
+    - Name: $v
+      Entry: 7
+      Data: 18|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: next
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: TeamFlow.Nodes.UnitaskPort, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: connections
+      Entry: 7
+      Data: 19|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection,
+        XNode]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 20|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: previous
+    - Name: node
+      Entry: 10
+      Data: 3
+    - Name: reroutePoints
+      Entry: 7
+      Data: 21|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 1
+    - Name: _connectionType
+      Entry: 3
+      Data: 1
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  graph: {fileID: 11400000}
+  position: {x: 24, y: -136}
+  mGUID: f88935a1-5767-4116-a173-6c4bd02358a8
+  showNext: 1
+  nextStepNode: {fileID: 2988823647890046601}
+  assistant:
+    ID: 
+    Name: 
+    Instructions: 
+    Model: 0
+    RetrieveOpen: 0
+    CodeInterpreterOpen: 0
+    ToAddFile: 
+    AssistantFiles: []
+    LoadName: 
+    HasCreated: 0
+  prompt: "\u5927\u8BED\u8A00\u6A21\u578B\uFF08LLM\uFF09\u662F\u57FA\u4E8E\u6D77\u91CF\u6587\u672C\u6570\u636E\u8BAD\u7EC3\u7684\u6DF1\u5EA6\u5B66\u4E60\u6A21\u578B\u3002\u5B83\u4E0D\u4EC5\u80FD\u591F\u751F\u6210\u81EA\u7136\u8BED\u8A00\u6587\u672C\uFF0C\u8FD8\u80FD\u591F\u6DF1\u5165\u7406\u89E3\u6587\u672C\u542B\u4E49\uFF0C\u5904\u7406\u5404\u79CD\u81EA\u7136\u8BED\u8A00\u4EFB\u52A1\uFF0C\u5982\u6587\u672C\u6458\u8981\u3001\u95EE\u7B54\u3001\u7FFB\u8BD1\u7B49\u3002\r\n2023\u5E74\uFF0C\u5927\u8BED\u8A00\u6A21\u578B\u53CA\u5176\u5728\u4EBA\u5DE5\u667A\u80FD\u9886\u57DF\u7684\u5E94\u7528\u5DF2\u6210\u4E3A\u5168\u7403\u79D1\u6280\u7814\u7A76\u7684\u70ED\u70B9\uFF0C\u5176\u5728\u89C4\u6A21\u4E0A\u7684\u589E\u957F\u5C24\u4E3A\u5F15\u4EBA\u6CE8\u76EE\uFF0C\u53C2\u6570\u91CF\u5DF2\u4ECE\u6700\u521D\u7684\u5341\u51E0\u4EBF\u8DC3\u5347\u5230\u5982\u4ECA\u7684\u4E00\u4E07\u4EBF\u3002\u53C2\u6570\u91CF\u7684\u63D0\u5347\u4F7F\u5F97\u6A21\u578B\u80FD\u591F\u66F4\u52A0\u7CBE\u7EC6\u5730\u6355\u6349\u4EBA\u7C7B\u8BED\u8A00\u5FAE\u5999\u4E4B\u5904\uFF0C\u66F4\u52A0\u6DF1\u5165\u5730\u7406\u89E3\u4EBA\u7C7B\u8BED\u8A00\u7684\u590D\u6742\u6027\u3002\u5728\u8FC7\u53BB\u7684\u4E00\u5E74\u91CC\uFF0C\u5927\u8BED\u8A00\u6A21\u578B\u5728\u5438\u7EB3\u65B0\u77E5\u8BC6\u3001\u5206\u89E3\u590D\u6742\u4EFB\u52A1\u4EE5\u53CA\u56FE\u6587\u5BF9\u9F50\u7B49\u591A\u65B9\u9762\u90FD\u6709\u663E\u8457\u63D0\u5347\u3002\u968F\u7740\u6280\u672F\u7684\u4E0D\u65AD\u6210\u719F\uFF0C\u5B83\u5C06\u4E0D\u65AD\u62D3\u5C55\u5176\u5E94\u7528\u8303\u56F4\uFF0C\u4E3A\u4EBA\u7C7B\u63D0\u4F9B\u66F4\u52A0\u667A\u80FD\u5316\u548C\u4E2A\u6027\u5316\u7684\u670D\u52A1\uFF0C\u8FDB\u4E00\u6B65\u6539\u5584\u4EBA\u4EEC\u7684\u751F\u6D3B\u548C\u751F\u4EA7\u65B9\u5F0F\u3002
+    [1-2] [6]\r\n2023\u5E7412\u670826\u65E5\uFF0C\u5927\u8BED\u8A00\u6A21\u578B\u5165\u9009\u201C2023\u5E74\u5EA6\u5341\u5927\u79D1\u6280\u540D\u8BCD\u201D\u3002"
+  result: "\u5927\u8BED\u8A00\u6A21\u578B\uFF08LLM\uFF09\u662F\u4E00\u79CD\u57FA\u4E8E\u6D77\u91CF\u6587\u672C\u6570\u636E\u8BAD\u7EC3\u7684\u6DF1\u5EA6\u5B66\u4E60\u6A21\u578B\u3002\u5B83\u4E0D\u4EC5\u80FD\u751F\u6210\u81EA\u7136\u8BED\u8A00\u6587\u672C\uFF0C\u8FD8\u80FD\u6DF1\u5165\u7406\u89E3\u6587\u672C\u542B\u4E49\uFF0C\u5E76\u5904\u7406\u5404\u79CD\u81EA\u7136\u8BED\u8A00\u4EFB\u52A1\uFF0C\u5982\u6587\u672C\u6458\u8981\u3001\u95EE\u7B54\u3001\u7FFB\u8BD1\u7B49\u3002\n\n\u622A\u81F32023\u5E74\uFF0C\u5927\u8BED\u8A00\u6A21\u578B\u53CA\u5176\u5728\u4EBA\u5DE5\u667A\u80FD\u9886\u57DF\u7684\u5E94\u7528\u5DF2\u6210\u4E3A\u5168\u7403\u79D1\u6280\u7814\u7A76\u7684\u70ED\u70B9\u3002\u5176\u89C4\u6A21\u7684\u589E\u957F\u5C24\u4E3A\u5F15\u4EBA\u6CE8\u76EE\uFF0C\u53C2\u6570\u91CF\u5DF2\u4ECE\u6700\u521D\u7684\u5341\u51E0\u4EBF\u8DC3\u5347\u5230\u4E00\u4E07\u4EBF\u3002\u53C2\u6570\u91CF\u7684\u63D0\u5347\u4F7F\u5F97\u6A21\u578B\u80FD\u591F\u66F4\u52A0\u7CBE\u7EC6\u5730\u6355\u6349\u4EBA\u7C7B\u8BED\u8A00\u5FAE\u5999\u4E4B\u5904\uFF0C\u66F4\u52A0\u6DF1\u5165\u5730\u7406\u89E3\u4EBA\u7C7B\u8BED\u8A00\u7684\u590D\u6742\u6027\u3002\u5728\u8FC7\u53BB\u7684\u4E00\u5E74\u91CC\uFF0C\u5927\u8BED\u8A00\u6A21\u578B\u5728\u5438\u7EB3\u65B0\u77E5\u8BC6\u3001\u5206\u89E3\u590D\u6742\u4EFB\u52A1\u4EE5\u53CA\u56FE\u6587\u5BF9\u9F50\u7B49\u591A\u65B9\u9762\u90FD\u6709\u663E\u8457\u63D0\u5347\u3002\u968F\u7740\u6280\u672F\u7684\u4E0D\u65AD\u6210\u719F\uFF0C\u5B83\u5C06\u4E0D\u65AD\u62D3\u5C55\u5176\u5E94\u7528\u8303\u56F4\uFF0C\u4E3A\u4EBA\u7C7B\u63D0\u4F9B\u66F4\u667A\u80FD\u5316\u548C\u4E2A\u6027\u5316\u7684\u670D\u52A1\uFF0C\u8FDB\u4E00\u6B65\u6539\u5584\u4EBA\u4EEC\u7684\u751F\u6D3B\u548C\u751F\u4EA7\u65B9\u5F0F\u3002
+    [1-2] [6]\n\n\u503C\u5F97\u4E00\u63D0\u7684\u662F\uFF0C2023\u5E7412\u670826\u65E5\uFF0C\u5927\u8BED\u8A00\u6A21\u578B\u5165\u9009\u201C2023\u5E74\u5EA6\u5341\u5927\u79D1\u6280\u540D\u8BCD\u201D\u3002"
+  RunningOnNewThread: 1
+  mThreadIDKey: ThreadID_f88935a1-5767-4116-a173-6c4bd02358a8
+--- !u!114 &6362871689161784886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6b023285394d9b948e7bee5a4552aa, type: 3}
+  m_Name: "\u5F00\u59CB"
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 6362871689161784886}
+    - {fileID: 4250948147979068863}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: ports
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[XNode.NodePort,
+        XNode]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: next
+    - Name: $v
+      Entry: 7
+      Data: 2|XNode.NodePort, XNode
+    - Name: _fieldName
+      Entry: 1
+      Data: next
+    - Name: _node
+      Entry: 10
+      Data: 0
+    - Name: _typeQualifiedName
+      Entry: 1
+      Data: TeamFlow.Nodes.UnitaskPort, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: connections
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, XNode]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: previous
+    - Name: node
+      Entry: 10
+      Data: 1
+    - Name: reroutePoints
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _direction
+      Entry: 3
+      Data: 1
+    - Name: _connectionType
+      Entry: 3
+      Data: 1
+    - Name: _typeConstraint
+      Entry: 3
+      Data: 0
+    - Name: _dynamic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  graph: {fileID: 11400000}
+  position: {x: -296, y: -136}
+  nextStepNode: {fileID: 4250948147979068863}

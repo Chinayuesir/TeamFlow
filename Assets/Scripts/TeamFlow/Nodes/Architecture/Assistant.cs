@@ -244,8 +244,8 @@ namespace TeamFlow
         private void OnInfoChanged()
         {
             if (!HasCreated) return;
+            if(!mOnInfoChanged) Debug.Log("数据改变！");
             mOnInfoChanged = true;
-            Debug.Log("数据改变！");
         }
 
         private void OnAssistantNameChanged()
