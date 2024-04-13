@@ -25,6 +25,22 @@ namespace TeamFlow.Nodes
         {
             return new UniTaskPort();
         }
+
+        [LabelText("是否开启循环")]
+        public bool IsLoop=false;
+        
+        [LabelText("循环终止关键词")]
+        [ShowIf(nameof(IsLoop))]
+        public string EndWord="";
+
+        [LabelText("最大循环次数")]
+        [ShowIf(nameof(IsLoop))]
+        public int LoopTimes;
+
+        [Input(ShowBackingValue.Never)] 
+        [LabelText("校验关键词")]
+        [ShowIf(nameof(IsLoop))]
+        public string EndWordVerify;
         
         BaseNode foreachStepNode;
         UniTaskCompletionSource childUTCS;
@@ -37,17 +53,26 @@ namespace TeamFlow.Nodes
         protected override async UniTask RunStepNodeLogic(UniTaskCompletionSource utcs,CancellationTokenSource cts=default)
         {
             if (utcs.Task.Status != UniTaskStatus.Pending) return;
-
-            //具体逻辑
-            for (int i = 0; i < DynamicOutputs.ToList().Count; i++)
+            
+            int loopTimes = 0;
+            //保证能执行至少一次
+            EndWordVerify = "";
+            while (true)
             {
-                if(DynamicOutputs.ToList()[i].IsConnected)
-                    foreachStepNode = DynamicOutputs.ToList()[i].Connection.node as BaseNode;
-                else
-                    foreachStepNode = null;
-                childUTCS = new UniTaskCompletionSource();
-                if(foreachStepNode!=null)
-                    await foreachStepNode.RunStepNode(childUTCS,cts);
+                if (EndWordVerify.Contains(EndWord) || loopTimes >= LoopTimes) break;
+                //具体逻辑
+                for (int i = 0; i < DynamicOutputs.ToList().Count; i++)
+                {
+                    if(DynamicOutputs.ToList()[i].IsConnected)
+                        foreachStepNode = DynamicOutputs.ToList()[i].Connection.node as BaseNode;
+                    else
+                        foreachStepNode = null;
+                    childUTCS = new UniTaskCompletionSource();
+                    if(foreachStepNode!=null)
+                        await foreachStepNode.RunStepNode(childUTCS,cts);
+                }
+                loopTimes++;
+                EndWordVerify = GetInputValue(nameof(EndWordVerify), EndWordVerify);
             }
             childUTCS = null;
         }

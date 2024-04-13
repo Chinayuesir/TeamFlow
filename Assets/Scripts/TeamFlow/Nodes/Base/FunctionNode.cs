@@ -4,6 +4,7 @@ using XNode;
 
 namespace TeamFlow.Nodes
 {
+    [NodeWidth(300)]
     public abstract class FunctionNode:Node
     {
         [Required]

@@ -1,13 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using OpenAI;
 using RoslynCSharp;
 using RoslynCSharp.Compiler;
 using Sirenix.OdinInspector;
-using UnityEditor;
-using UnityEditor.Compilation;
 using UnityEngine;
 using Tool = OpenAI.Tool;
 
@@ -16,15 +13,15 @@ namespace TeamFlow.Nodes
     [NodeTitle("代码测试", "自定义函数", SdfIconType.Compass)]
     public class TestCode : FunctionNode
     {
-        [LabelText("需要引用的程序集资源")]
-        public List<AssemblyReferenceAsset> AssemblyReferenceAssets;
+        [LabelText("程序集资源")]
+        public AssemblyReferences_SO Assemblies_SO;
         
         private static AssemblyReferenceAsset[] mAssemblyReferences;
 
-        [Button("加载以上所有程序集")]
+        [Button("加载程序集")]
         private void LoadAssemblies()
         {
-            mAssemblyReferences = AssemblyReferenceAssets.ToArray();
+            mAssemblyReferences = Assemblies_SO.AssemblyReferenceAssets.ToArray();
             Debug.Log("加载成功！");
         }
 
