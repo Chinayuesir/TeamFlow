@@ -1,6 +1,5 @@
 ﻿// Licensed under the MIT License. See LICENSE in the project root for license information.
 
-using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
@@ -16,7 +15,6 @@ using OpenAI.Moderations;
 using OpenAI.Threads;
 using System.Collections.Generic;
 using System.Security.Authentication;
-using Newtonsoft.Json.Linq;
 using Utilities.WebRequestRest;
 
 namespace OpenAI
@@ -119,10 +117,10 @@ namespace OpenAI
             ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
             Converters = new List<JsonConverter>
             {
-                new StringEnumConverter(new SnakeCaseNamingStrategy()),
+                new StringEnumConverter(new SnakeCaseNamingStrategy())
             }
         };
-        
+
         /// <summary>
         /// List and describe the various models available in the API.
         /// You can refer to the Models documentation to understand which models are available for certain endpoints: <see href="https://platform.openai.com/docs/models/model-endpoint-compatibility"/>.<br/>

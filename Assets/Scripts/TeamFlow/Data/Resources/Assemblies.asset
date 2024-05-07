@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Assemblies
   m_EditorClassIdentifier: 
   AssemblyReferenceAssets:
+  - {fileID: 11400000, guid: 052c69a498437e949bce7bea45987c6b, type: 2}
   - {fileID: 11400000, guid: 5aee9bce97ce92f48b2d6cf18dbe96f9, type: 2}
   - {fileID: 11400000, guid: fe24fc97048e2974787cc8d5328fa171, type: 2}
   - {fileID: 11400000, guid: eee75363a127d4e43acec7a183e8ba84, type: 2}
@@ -25,8 +26,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d88f75994d58d8c40ac6331cae45287e, type: 2}
   - {fileID: 11400000, guid: f4dfa258860e481479bf5ab6ae500faf, type: 2}
   - {fileID: 11400000, guid: 93cd16b8945e2b74cb3101170cee91dd, type: 2}
-  - {fileID: 11400000, guid: 052c69a498437e949bce7bea45987c6b, type: 2}
   - {fileID: 11400000, guid: 047def5916b8efd4788cdf202f1c502e, type: 2}
   - {fileID: 11400000, guid: d63caa786bb07a04dbed0198792760d9, type: 2}
   - {fileID: 11400000, guid: e877e94ac5f9c7c4192a879696d5e5d8, type: 2}
   - {fileID: 11400000, guid: e926a68b2b20b4a49b56d48786be169b, type: 2}
+  - {fileID: 11400000, guid: 41d458f3021f97149aab78f20450e90c, type: 2}
+  - {fileID: 11400000, guid: 5cdebb47dc16ade438decb347e8f693d, type: 2}

@@ -44,8 +44,8 @@ MonoBehaviour:
     ignoreCase: 0
     allowPInvoke: 0
   logDetail: 3
-  allowUnsafeCode: 0
-  allowOptimizeCode: 0
+  allowUnsafeCode: 1
+  allowOptimizeCode: 1
   allowConcurrentCompile: 1
   deterministic: 0
   generateInMemory: 1
@@ -66,6 +66,7 @@ MonoBehaviour:
   - UnityEngine.UIModule.dll
   - mscorlib
   - RoslynCSharp.Examples.dll
+  - UnityEngine.InputModule.dll
   referenceAssets: []
   defineSymbols: []
   allowHotReloading: 1

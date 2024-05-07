@@ -4,10 +4,8 @@ using Newtonsoft.Json;
 using OpenAI.Extensions;
 using OpenAI.Files;
 using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
 using Utilities.WebRequestRest;
 
 namespace OpenAI.Assistants
@@ -58,7 +56,7 @@ namespace OpenAI.Assistants
             response.Validate(EnableDebug);
             return response.Deserialize<AssistantResponse>(client);
         }
-        
+
         /// <summary>
         /// Modifies an assistant.
         /// </summary>

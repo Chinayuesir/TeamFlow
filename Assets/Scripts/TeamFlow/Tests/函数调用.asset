@@ -393,7 +393,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   graph: {fileID: 11400000}
-  position: {x: 136, y: -152}
+  position: {x: 72, y: -152}
   mGUID: e43bb9c0-6abb-4835-a4b3-818494181e60
   showNext: 1
   nextStepNode: {fileID: -2376674080988957280}
@@ -409,8 +409,7 @@ MonoBehaviour:
     AssistantFiles: []
     LoadName: 
   prompt: "\u83B7\u53D6\u5F53\u524D\u5929\u6D25\u7684\u5929\u6C14\uFF0C\u5206\u522B\u83B7\u53D6\u534E\u6C0F\u5EA6\u548C\u6444\u6C0F\u5EA6"
-  result: "\u5F53\u524D\u5929\u6D25\u7684\u5929\u6C14\u5982\u4E0B\uFF1A\n- \u6444\u6C0F\u5EA6:
-    66\u2103\n- \u534E\u6C0F\u5EA6: 69\u2109"
+  result: 
   RunningOnNewThread: 1
   mThreadIDKey: ThreadID_e43bb9c0-6abb-4835-a4b3-818494181e60
 --- !u!114 &-3400676883864275900
@@ -1627,7 +1626,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   graph: {fileID: 11400000}
-  position: {x: 504, y: -120}
+  position: {x: 456, y: -120}
   mGUID: 7d235af4-39fe-4a1a-a93b-ff8bea38f551
   showNext: 1
   nextStepNode: {fileID: 0}

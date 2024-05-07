@@ -2,9 +2,7 @@
 
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using Newtonsoft.Json.Linq;
 using Utilities.WebRequestRest;
 
 namespace OpenAI.Extensions
@@ -101,14 +99,7 @@ namespace OpenAI.Extensions
 
         internal static T Deserialize<T>(this Response response, OpenAIClient client) where T : BaseResponse
         {
-            // 假设 originalJson 是原始的 JSON 字符串
-            JObject json = JObject.Parse(response.Body);
-            if (json["metadata"] is JArray)
-            {
-                json["metadata"] = new JObject();
-            }
-            string modifiedJson = json.ToString();
-            var result = JsonConvert.DeserializeObject<T>(modifiedJson, OpenAIClient.JsonSerializationOptions);
+            var result = JsonConvert.DeserializeObject<T>(response.Body, OpenAIClient.JsonSerializationOptions);
             result.SetResponseData(response, client);
             return result;
         }

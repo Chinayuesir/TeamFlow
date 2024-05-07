@@ -47,6 +47,7 @@ namespace TeamFlow.Nodes
         {
             base.Init();
             mThreadIDKey = "ThreadID_" + mGUID;
+            result = "";
         }
 
         public override object GetValue(NodePort port)

@@ -22,7 +22,8 @@ namespace TeamFlow.Utilities
         GPT3_5_Turbo,
         GPT4,
         GPT4_32K,
-        GPT3_5_Turbo_16K
+        GPT3_5_Turbo_16K,
+        GPT4_Turbo
     }
     
     public enum AssistantModelType
@@ -34,12 +35,13 @@ namespace TeamFlow.Utilities
     public class OpenAIUtility : IUtility
     {
         private readonly OpenAIClient mApi= 
-            new OpenAIClient(Resources.Load<OpenAIConfiguration>("AIGateway"));
+            new OpenAIClient(Resources.Load<OpenAIConfiguration>("OpenAIConfiguration"));
 
         private string mDefaultSystemMessage = "你是一个有用的问答助手";
 
         private static Dictionary<ModelType, Model> mModelsDic=new Dictionary<ModelType, Model>()
         {
+            {ModelType.GPT4_Turbo,Model.GPT4_Turbo},
             {ModelType.GPT4,Model.GPT4},
             {ModelType.GPT4_32K,Model.GPT4_32K},
             {ModelType.GPT3_5_Turbo,Model.GPT3_5_Turbo},

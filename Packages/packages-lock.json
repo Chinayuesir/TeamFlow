@@ -189,7 +189,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-      "version": "1.3.5",
+      "version": "1.4.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -240,12 +240,12 @@
       "url": "https://packages.unity.com"
     },
     "com.utilities.async": {
-      "version": "2.1.3",
+      "version": "2.1.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.editorcoroutines": "1.0.0",
-        "com.unity.test-framework": "1.3.5",
+        "com.unity.test-framework": "1.4.2",
         "com.unity.nuget.mono-cecil": "1.11.4"
       },
       "url": "https://package.openupm.com"
@@ -262,7 +262,7 @@
       "url": "https://package.openupm.com"
     },
     "com.utilities.buildpipeline": {
-      "version": "1.3.0",
+      "version": "1.3.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {},

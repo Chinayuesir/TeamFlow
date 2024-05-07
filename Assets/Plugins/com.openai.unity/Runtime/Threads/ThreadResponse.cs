@@ -9,7 +9,7 @@ namespace OpenAI.Threads
 {
     /// <summary>
     /// A conversation session between an Assistant and a user.
-    /// Threads store Messages and automatically handle truncation to fit content into a modelï¿½s context.
+    /// Threads store Messages and automatically handle truncation to fit content into a model’s context.
     /// </summary>
     [Preserve]
     public sealed class ThreadResponse : BaseResponse
@@ -59,7 +59,6 @@ namespace OpenAI.Threads
         /// Keys can be a maximum of 64 characters long and values can be a maximum of 512 characters long.
         /// </summary>
         [Preserve]
-        [JsonIgnore]
         [JsonProperty("metadata")]
         public IReadOnlyDictionary<string, string> Metadata { get; }
 

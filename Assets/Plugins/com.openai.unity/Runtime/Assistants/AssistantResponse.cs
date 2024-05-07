@@ -8,7 +8,7 @@ using UnityEngine.Scripting;
 namespace OpenAI.Assistants
 {
     /// <summary>
-    /// Purpose-built AI that uses OpenAI’s models and calls tools.
+    /// Purpose-built AI that uses OpenAIæŠ¯ models and calls tools.
     /// </summary>
     [Preserve]
     public sealed class AssistantResponse : BaseResponse
@@ -25,7 +25,7 @@ namespace OpenAI.Assistants
             string instructions,
             IReadOnlyList<Tool> tools,
             IReadOnlyList<string> fileIds,
-            Dictionary<string,string> metadata)
+            Dictionary<string, string> metadata)
         {
             Id = id;
             Object = @object;
@@ -120,9 +120,10 @@ namespace OpenAI.Assistants
         /// This can be useful for storing additional information about the object in a structured format.
         /// Keys can be a maximum of 64 characters long and values can be a maximum of 512 characters long.
         /// </summary>
-         [Preserve]
-         [JsonProperty("metadata")]
-         public IReadOnlyDictionary<string, string> Metadata { get; }
+        [Preserve]
+        [JsonIgnore]
+        [JsonProperty("metadata")]
+        public IReadOnlyDictionary<string, string> Metadata { get; }
 
         [Preserve]
         public static implicit operator string(AssistantResponse assistant) => assistant?.Id;

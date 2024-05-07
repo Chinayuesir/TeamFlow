@@ -16,12 +16,13 @@ namespace TeamFlow.Nodes
         [LabelText("程序集资源")]
         public AssemblyReferences_SO Assemblies_SO;
         
-        private static AssemblyReferenceAsset[] mAssemblyReferences;
+        private static List<AssemblyReferenceAsset> mAssemblyReferences;
 
         [Button("加载程序集")]
         private void LoadAssemblies()
         {
-            mAssemblyReferences = Assemblies_SO.AssemblyReferenceAssets.ToArray();
+            mAssemblyReferences = new List<AssemblyReferenceAsset>();
+            mAssemblyReferences = Assemblies_SO.AssemblyReferenceAssets;
             Debug.Log("加载成功！");
         }
 
@@ -41,14 +42,15 @@ namespace TeamFlow.Nodes
             Debug.Log($"助手提取到了代码，代码为：{code}");
             
             StringBuilder errors = new StringBuilder();
-            var domain = ScriptDomain.CreateDomain("Example Domain");
+            var domain = ScriptDomain.CreateDomain("Example");
             // Compile and load code
-            ScriptAssembly assembly = 
-                domain.CompileAndLoadSource(code, ScriptSecurityMode.UseSettings,mAssemblyReferences);
-            
-            
             foreach (AssemblyReferenceAsset reference in mAssemblyReferences)
+            {
                 domain.RoslynCompilerService.ReferenceAssemblies.Add(reference);
+                Debug.Log(reference.name);
+            }
+            ScriptAssembly assembly = 
+                domain.CompileAndLoadSource(code);
             // Check for compiler errors
             if(domain.CompileResult.Success == false)
             {

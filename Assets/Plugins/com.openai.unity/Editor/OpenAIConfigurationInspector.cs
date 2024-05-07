@@ -14,7 +14,6 @@ namespace OpenAI.Editor
 
         private SerializedProperty apiKey;
         private SerializedProperty organizationId;
-        
         private SerializedProperty useAzureOpenAI;
         private SerializedProperty proxyDomain;
         private SerializedProperty resourceName;

@@ -21,7 +21,7 @@ namespace OpenAI
             get => apiKey;
             internal set => apiKey = value;
         }
-        
+
         [SerializeField]
         [FormerlySerializedAs("organization")]
         [Tooltip("For users who belong to multiple organizations, you can pass a header to specify which organization is used for an API request.\n\n" +

@@ -2,13 +2,13 @@
     "name": "TeamFlow",
     "rootNamespace": "",
     "references": [
-        "GUID:3248779d86bd31747b5d2214f30b01ac",
         "GUID:b8e24fd1eb19b4226afebb2810e3c19b",
         "GUID:002c1bbed08fa44d282ef34fd5edb138",
         "GUID:1dadc991e72ca084885645afd9a9b02a",
         "GUID:7958db66189566541a6363568aee1575",
         "GUID:82ccc7faf9a0ce8478430010c631dc89",
-        "GUID:842c85e8e7f0d24438e45dd7e05434da"
+        "GUID:842c85e8e7f0d24438e45dd7e05434da",
+        "GUID:4924e0a2d5f92ad44a03dfdcbbb687b4"
     ],
     "includePlatforms": [
         "Editor"

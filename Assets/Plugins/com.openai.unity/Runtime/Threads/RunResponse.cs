@@ -9,7 +9,7 @@ namespace OpenAI.Threads
 {
     /// <summary>
     /// An invocation of an Assistant on a Thread.
-    /// The Assistant uses itæŠ¯ configuration and the ThreadæŠ¯ Messages to perform tasks by calling models and tools.
+    /// The Assistant uses it’s configuration and the Thread’s Messages to perform tasks by calling models and tools.
     /// As part of a Run, the Assistant appends Messages to the Thread.
     /// </summary>
     [Preserve]
