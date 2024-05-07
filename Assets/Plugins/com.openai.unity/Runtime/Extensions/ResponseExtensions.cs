@@ -99,7 +99,15 @@ namespace OpenAI.Extensions
 
         internal static T Deserialize<T>(this Response response, OpenAIClient client) where T : BaseResponse
         {
-            var result = JsonConvert.DeserializeObject<T>(response.Body, OpenAIClient.JsonSerializationOptions);
+            var json = response.Body;
+            if (json.Contains("file_ids:{}"))
+            {
+                json = json.Replace("file_ids:{}", "file_ids:[]");
+            }else if (json.Contains("metadata:{}"))
+            {
+                json = json.Replace("metadata:{}", "metadata:[]");
+            }
+            var result = JsonConvert.DeserializeObject<T>(json, OpenAIClient.JsonSerializationOptions);
             result.SetResponseData(response, client);
             return result;
         }

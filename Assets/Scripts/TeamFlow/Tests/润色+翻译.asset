@@ -443,35 +443,17 @@ MonoBehaviour:
     ToAddFile: 
     AssistantFiles: []
     LoadName: 
-  AssistantName: "Unity3D\u7A0B\u5E8F\u5458"
+  AssistantName: "\u5C0F\u6DA6"
   Assistant:
-    ID: asst_H5mrXLtINTFOagjven7BHmT7
-    Name: "Unity3D\u7A0B\u5E8F\u5458"
-    Instructions: "\u4F60\u662F\u4E00\u4E2A\u7F16\u5199Unity3D\u4EE3\u7801\u7684\u7A0B\u5E8F\u5458"
-    Model: 1
+    ID: asst_ZwI7AZCiVp3gpz0nYbjlpr5j
+    Name: "\u5C0F\u6DA6"
+    Instructions: "\u4F60\u8D1F\u8D23\u6DA6\u8272"
+    Model: 0
     CodeInterpreterOpen: 0
     HasCreated: 1
-    RetrieveOpen: 1
-    ToAddFile: humancomputer-interaction--interact-2021-2021.pdf
-    AssistantFiles:
-    - FileID: file-qK060WcuDoo58SrPRstblZ81
-      FileName: humancomputer-interaction--interact-2021-2021.pdf
-      AddFilePath: 
-      IsOnServer: 1
-      ProgressBar: 0
-      AssistantName: "Unity3D\u7A0B\u5E8F\u5458"
-      AssistantInfoList:
-      - "Unity3D\u7A0B\u5E8F\u5458---asst_H5mrXLtINTFOagjven7BHmT7"
-      - "Unity3D\u7A0B\u5E8F\u5458---asst_H5mrXLtINTFOagjven7BHmT7"
-    - FileID: file-qK060WcuDoo58SrPRstblZ81
-      FileName: humancomputer-interaction--interact-2021-2021.pdf
-      AddFilePath: 
-      IsOnServer: 1
-      ProgressBar: 0
-      AssistantName: "Unity3D\u7A0B\u5E8F\u5458"
-      AssistantInfoList:
-      - "Unity3D\u7A0B\u5E8F\u5458---asst_H5mrXLtINTFOagjven7BHmT7"
-      - "Unity3D\u7A0B\u5E8F\u5458---asst_H5mrXLtINTFOagjven7BHmT7"
+    RetrieveOpen: 0
+    ToAddFile: 
+    AssistantFiles: []
     LoadName: 
 --- !u!114 &-2520493040624127646
 MonoBehaviour:
@@ -670,12 +652,12 @@ MonoBehaviour:
     LoadName: 
   AssistantName: "\u5C0F\u8BD1"
   Assistant:
-    ID: 
-    Name: 
-    Instructions: 
+    ID: asst_ub8qiukAIauIbABerkluwKJC
+    Name: "\u5C0F\u8BD1"
+    Instructions: "\u4F60\u662F\u4E00\u4E2A\u7FFB\u8BD1\u52A9\u624B\uFF0C\u8D1F\u8D23\u5C06\u7528\u4E8E\u63D0\u4F9B\u7684\u4E2D\u6587\u7FFB\u8BD1\u4E3A\u82F1\u6587"
     Model: 0
     CodeInterpreterOpen: 0
-    HasCreated: 0
+    HasCreated: 1
     RetrieveOpen: 0
     ToAddFile: 
     AssistantFiles: []
@@ -727,6 +709,7 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 2988823647890046601}
     - {fileID: 4250948147979068863}
+    - {fileID: 3064434020113172788}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -920,7 +903,32 @@ MonoBehaviour:
         XNode]], mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 12|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: previous
+    - Name: node
+      Entry: 10
+      Data: 2
+    - Name: reroutePoints
+      Entry: 7
+      Data: 13|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
       Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -955,7 +963,7 @@ MonoBehaviour:
   position: {x: 376, y: -136}
   mGUID: 29d097f2-43bc-46d2-80e5-74593e29f834
   showNext: 1
-  nextStepNode: {fileID: 0}
+  nextStepNode: {fileID: 3064434020113172788}
   result: 
 --- !u!114 &3064434020113172788
 MonoBehaviour:
@@ -977,6 +985,7 @@ MonoBehaviour:
     - {fileID: -2520493040624127646}
     - {fileID: 4250948147979068863}
     - {fileID: -6625479680966651755}
+    - {fileID: 2988823647890046601}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -1243,7 +1252,32 @@ MonoBehaviour:
         XNode]], mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 16|XNode.NodePort+PortConnection, XNode
+    - Name: fieldName
+      Entry: 1
+      Data: next
+    - Name: node
+      Entry: 10
+      Data: 4
+    - Name: reroutePoints
+      Entry: 7
+      Data: 17|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        mscorlib
+    - Name: 
+      Entry: 12
       Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -1276,7 +1310,7 @@ MonoBehaviour:
       Data: next
     - Name: $v
       Entry: 7
-      Data: 16|XNode.NodePort, XNode
+      Data: 18|XNode.NodePort, XNode
     - Name: _fieldName
       Entry: 1
       Data: next
@@ -1289,14 +1323,14 @@ MonoBehaviour:
         PublicKeyToken=null
     - Name: connections
       Entry: 7
-      Data: 17|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection,
+      Data: 19|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection,
         XNode]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 18|XNode.NodePort+PortConnection, XNode
+      Data: 20|XNode.NodePort+PortConnection, XNode
     - Name: fieldName
       Entry: 1
       Data: previous
@@ -1305,7 +1339,7 @@ MonoBehaviour:
       Data: 3
     - Name: reroutePoints
       Entry: 7
-      Data: 19|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+      Data: 21|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
         mscorlib
     - Name: 
       Entry: 12
@@ -1366,7 +1400,7 @@ MonoBehaviour:
     AssistantFiles: []
     LoadName: 
   prompt: 
-  result: 
+  result: 'Error: Object reference not set to an instance of an object'
   RunningOnNewThread: 1
   mThreadIDKey: ThreadID_f88935a1-5767-4116-a173-6c4bd02358a8
 --- !u!114 &4250948147979068863
@@ -1805,7 +1839,7 @@ MonoBehaviour:
     LoadName: 
   prompt: "\u5927\u8BED\u8A00\u6A21\u578B\uFF08LLM\uFF09\u662F\u57FA\u4E8E\u6D77\u91CF\u6587\u672C\u6570\u636E\u8BAD\u7EC3\u7684\u6DF1\u5EA6\u5B66\u4E60\u6A21\u578B\u3002\u5B83\u4E0D\u4EC5\u80FD\u591F\u751F\u6210\u81EA\u7136\u8BED\u8A00\u6587\u672C\uFF0C\u8FD8\u80FD\u591F\u6DF1\u5165\u7406\u89E3\u6587\u672C\u542B\u4E49\uFF0C\u5904\u7406\u5404\u79CD\u81EA\u7136\u8BED\u8A00\u4EFB\u52A1\uFF0C\u5982\u6587\u672C\u6458\u8981\u3001\u95EE\u7B54\u3001\u7FFB\u8BD1\u7B49\u3002\r\n2023\u5E74\uFF0C\u5927\u8BED\u8A00\u6A21\u578B\u53CA\u5176\u5728\u4EBA\u5DE5\u667A\u80FD\u9886\u57DF\u7684\u5E94\u7528\u5DF2\u6210\u4E3A\u5168\u7403\u79D1\u6280\u7814\u7A76\u7684\u70ED\u70B9\uFF0C\u5176\u5728\u89C4\u6A21\u4E0A\u7684\u589E\u957F\u5C24\u4E3A\u5F15\u4EBA\u6CE8\u76EE\uFF0C\u53C2\u6570\u91CF\u5DF2\u4ECE\u6700\u521D\u7684\u5341\u51E0\u4EBF\u8DC3\u5347\u5230\u5982\u4ECA\u7684\u4E00\u4E07\u4EBF\u3002\u53C2\u6570\u91CF\u7684\u63D0\u5347\u4F7F\u5F97\u6A21\u578B\u80FD\u591F\u66F4\u52A0\u7CBE\u7EC6\u5730\u6355\u6349\u4EBA\u7C7B\u8BED\u8A00\u5FAE\u5999\u4E4B\u5904\uFF0C\u66F4\u52A0\u6DF1\u5165\u5730\u7406\u89E3\u4EBA\u7C7B\u8BED\u8A00\u7684\u590D\u6742\u6027\u3002\u5728\u8FC7\u53BB\u7684\u4E00\u5E74\u91CC\uFF0C\u5927\u8BED\u8A00\u6A21\u578B\u5728\u5438\u7EB3\u65B0\u77E5\u8BC6\u3001\u5206\u89E3\u590D\u6742\u4EFB\u52A1\u4EE5\u53CA\u56FE\u6587\u5BF9\u9F50\u7B49\u591A\u65B9\u9762\u90FD\u6709\u663E\u8457\u63D0\u5347\u3002\u968F\u7740\u6280\u672F\u7684\u4E0D\u65AD\u6210\u719F\uFF0C\u5B83\u5C06\u4E0D\u65AD\u62D3\u5C55\u5176\u5E94\u7528\u8303\u56F4\uFF0C\u4E3A\u4EBA\u7C7B\u63D0\u4F9B\u66F4\u52A0\u667A\u80FD\u5316\u548C\u4E2A\u6027\u5316\u7684\u670D\u52A1\uFF0C\u8FDB\u4E00\u6B65\u6539\u5584\u4EBA\u4EEC\u7684\u751F\u6D3B\u548C\u751F\u4EA7\u65B9\u5F0F\u3002
     [1-2] [6]\r\n2023\u5E7412\u670826\u65E5\uFF0C\u5927\u8BED\u8A00\u6A21\u578B\u5165\u9009\u201C2023\u5E74\u5EA6\u5341\u5927\u79D1\u6280\u540D\u8BCD\u201D\u3002"
-  result: 
+  result: 'Error: Object reference not set to an instance of an object'
   RunningOnNewThread: 1
   mThreadIDKey: ThreadID_f88935a1-5767-4116-a173-6c4bd02358a8
 --- !u!114 &6362871689161784886

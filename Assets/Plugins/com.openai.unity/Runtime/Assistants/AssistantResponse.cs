@@ -3,6 +3,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine.Scripting;
 
 namespace OpenAI.Assistants
@@ -113,6 +114,7 @@ namespace OpenAI.Assistants
         /// </summary>
         [Preserve]
         [JsonProperty("file_ids")]
+        [CanBeNull]
         public IReadOnlyList<string> FileIds { get; }
 
         /// <summary>
@@ -121,8 +123,8 @@ namespace OpenAI.Assistants
         /// Keys can be a maximum of 64 characters long and values can be a maximum of 512 characters long.
         /// </summary>
         [Preserve]
-        [JsonIgnore]
         [JsonProperty("metadata")]
+        [CanBeNull]
         public IReadOnlyDictionary<string, string> Metadata { get; }
 
         [Preserve]

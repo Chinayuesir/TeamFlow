@@ -1,5 +1,6 @@
 ﻿// Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
@@ -15,6 +16,7 @@ using OpenAI.Moderations;
 using OpenAI.Threads;
 using System.Collections.Generic;
 using System.Security.Authentication;
+using Newtonsoft.Json.Linq;
 using Utilities.WebRequestRest;
 
 namespace OpenAI
@@ -117,9 +119,12 @@ namespace OpenAI
             ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
             Converters = new List<JsonConverter>
             {
-                new StringEnumConverter(new SnakeCaseNamingStrategy())
+                new StringEnumConverter(new SnakeCaseNamingStrategy()),
+                new EmptyObjectToIReadOnlyListConverter()
             }
         };
+        
+        
 
         /// <summary>
         /// List and describe the various models available in the API.
@@ -182,5 +187,28 @@ namespace OpenAI
         /// <see href="https://platform.openai.com/docs/api-reference/assistants"/>
         /// </summary>
         public AssistantsEndpoint AssistantsEndpoint { get; }
+    }
+    
+    public class EmptyObjectToIReadOnlyListConverter : JsonConverter
+    {
+        public override bool CanConvert(Type objectType)
+        {
+            return typeof(IReadOnlyList<string>).IsAssignableFrom(objectType);
+        }
+
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var token = JToken.Load(reader);
+            if (token.Type == JTokenType.Object && !token.HasValues)
+            {
+                return new List<string>();
+            }
+            return token.ToObject(objectType, serializer);
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

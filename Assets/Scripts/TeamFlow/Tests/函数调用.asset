@@ -1750,7 +1750,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   graph: {fileID: 11400000}
-  position: {x: 72, y: 216}
+  position: {x: 88, y: 232}
 --- !u!114 &-1677583871017274425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2030,9 +2030,9 @@ MonoBehaviour:
     LoadName: 
   AssistantName: "\u5929\u6C14\u52A9\u624B"
   Assistant:
-    ID: asst_gZVmusokFiyEFAYTDuJO5L4K
+    ID: asst_GZMdcQIZ6wIMCQzwl4bEFmZL
     Name: "\u5929\u6C14\u52A9\u624B"
-    Instructions: "\u4F60\u662F\u4E00\u4E2A\u6709\u7528\u7684\u5929\u6C14\u52A9\u624B\uFF0C\u80FD\u83B7\u5F97\u5F53\u524D\u6E29\u5EA6"
+    Instructions: "\u4F60\u662F\u4E00\u4E2A\u5929\u6C14\u52A9\u624B\uFF0C\u53EF\u4EE5\u5F97\u5230\u5F53\u524D\u5730\u70B9\u7684\u5929\u6C14\u3002"
     Model: 0
     CodeInterpreterOpen: 0
     HasCreated: 1
